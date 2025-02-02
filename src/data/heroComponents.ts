@@ -1,0 +1,22 @@
+export const heroComponents = {
+  'LuxuryFashionHero.tsx': `// ... keep existing code (LuxuryFashionHero component string)`,
+  'LuxuryFashionHero2.tsx': `// ... keep existing code (LuxuryFashionHero2 component string)`,
+  'LuxuryFashionHero3.tsx': `// ... keep existing code (LuxuryFashionHero3 component string)`,
+  'TechStoreHero.tsx': `// ... keep existing code (TechStoreHero component string)`,
+  'TechStoreHero2.tsx': `// ... keep existing code (TechStoreHero2 component string)`,
+  'TechStoreHero3.tsx': `// ... keep existing code (TechStoreHero3 component string)`,
+  'TechStoreHero4.tsx': `// ... keep existing code (TechStoreHero4 component string)`,
+  'FurnitureStoreHero.tsx': `// ... keep existing code (FurnitureStoreHero component string)`,
+  'FurnitureStoreHero2.tsx': `// ... keep existing code (FurnitureStoreHero2 component string)`,
+  'FurnitureStoreHero3.tsx': `// ... keep existing code (FurnitureStoreHero3 component string)`,
+  'FurnitureStoreHero4.tsx': `// ... keep existing code (FurnitureStoreHero4 component string)`,
+  'JewelryStoreHero.tsx': `// ... keep existing code (JewelryStoreHero component string)`,
+  'JewelryStoreHero2.tsx': `// ... keep existing code (JewelryStoreHero2 component string)`,
+  'JewelryStoreHero3.tsx': `// ... keep existing code (JewelryStoreHero3 component string)`,
+  'CosmeticsHero.tsx': `// ... keep existing code (CosmeticsHero component string)`,
+  'CosmeticsHero2.tsx': `// ... keep existing code (CosmeticsHero2 component string)`,
+  'CosmeticsHero3.tsx': `// ... keep existing code (CosmeticsHero3 component string)`,
+  'SportswearHero.tsx': `// ... keep existing code (SportswearHero component string)`,
+  'SportswearHero2.tsx': `// ... keep existing code (SportswearHero2 component string)`,
+  'SportswearHero3.tsx': `// ... keep existing code (SportswearHero3 component string)`
+};
