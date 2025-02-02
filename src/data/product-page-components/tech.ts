@@ -1,4 +1,5 @@
-export const techProductPage = `import { useState } from "react"
+export const techProductPage = `
+import { useState } from "react"
 import {
   Heart,
   Minus,
@@ -53,13 +54,13 @@ export const TechProductPage = () => {
               <button
                 key={i}
                 onClick={() => setMainImage(i)}
-                className={`overflow-hidden rounded-xl ${
+                className={\`overflow-hidden rounded-xl \${
                   mainImage === i ? "ring-2 ring-primary" : ""
-                }`}
+                }\`}
               >
                 <img
                   src={image}
-                  alt={`Product view ${i + 1}`}
+                  alt={\`Product view \${i + 1}\`}
                   className="aspect-square object-cover"
                 />
               </button>
