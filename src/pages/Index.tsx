@@ -19,24 +19,28 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen">
-      <div className="fixed left-1/2 top-4 z-50 flex -translate-x-1/2 flex-wrap justify-center gap-4">
-        {heroes.map((hero, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentHero(index)}
-            className={`px-4 py-2 rounded-full transition-colors ${
-              currentHero === index
-                ? 'bg-black text-white'
-                : 'bg-white text-black border border-black'
-            }`}
-          >
-            {hero.name}
-          </button>
-        ))}
-      </div>
+    <div className="min-h-screen flex flex-col">
+      <nav className="w-full bg-white/80 backdrop-blur-sm py-4 sticky top-0 z-50 border-b">
+        <div className="container mx-auto flex flex-wrap justify-center gap-4">
+          {heroes.map((hero, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentHero(index)}
+              className={`px-4 py-2 rounded-full transition-colors ${
+                currentHero === index
+                  ? 'bg-black text-white'
+                  : 'bg-white text-black border border-black'
+              }`}
+            >
+              {hero.name}
+            </button>
+          ))}
+        </div>
+      </nav>
       
-      {heroes[currentHero].component}
+      <main className="flex-1">
+        {heroes[currentHero].component}
+      </main>
     </div>
   );
 };
