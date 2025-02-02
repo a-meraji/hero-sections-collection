@@ -8,7 +8,7 @@ interface CodeExampleBlockProps {
   description?: string;
   code: string;
   component: React.ReactNode;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 export const CodeExampleBlock = ({ title, description, code, component }: CodeExampleBlockProps) => {
