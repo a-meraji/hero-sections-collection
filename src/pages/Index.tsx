@@ -21,29 +21,199 @@ import SportswearHero from '@/components/heroes/SportswearHero';
 import SportswearHero2 from '@/components/heroes/SportswearHero2';
 import SportswearHero3 from '@/components/heroes/SportswearHero3';
 
+// Reference object containing standalone component code
+const heroComponents = {
+  'LuxuryFashionHero.tsx': `import { useState, useEffect } from 'react';
+
+const LuxuryFashionHero = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const slides = [
+    {
+      bg: "https://images.unsplash.com/photo-1483058712412-4245e9b90334",
+      title: "Autumn Collection",
+      subtitle: "2024"
+    },
+    {
+      bg: "https://images.unsplash.com/photo-1500673922987-e212871fec22",
+      title: "Summer Elegance",
+      subtitle: "2024"
+    },
+    {
+      bg: "https://images.unsplash.com/photo-1527576539890-dfa815648363",
+      title: "Winter Luxe",
+      subtitle: "2024"
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
+  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+
+  return (
+    <div className="relative h-screen w-full overflow-hidden">
+      {slides.map((slide, index) => (
+        <div
+          key={index}
+          className={\`absolute inset-0 transition-opacity duration-1000 \${
+            index === currentSlide ? 'opacity-100' : 'opacity-0'
+          }\`}
+          style={{
+            backgroundImage: \`linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(\${slide.bg})\`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        >
+          <div className="flex h-full items-center justify-center text-white">
+            <div className="text-center">
+              <h1 className="mb-4 text-6xl font-bold tracking-tight">{slide.title}</h1>
+              <p className="text-2xl font-light">{slide.subtitle}</p>
+              <button className="mt-8 border border-white px-8 py-3 text-lg transition-colors hover:bg-white hover:text-black">
+                Explore Collection
+              </button>
+            </div>
+          </div>
+        </div>
+      ))}
+      
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-black/30 p-2 text-white transition-colors hover:bg-black/50"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="m15 18-6-6 6-6"/>
+        </svg>
+      </button>
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-black/30 p-2 text-white transition-colors hover:bg-black/50"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="m9 18 6-6-6-6"/>
+        </svg>
+      </button>
+      
+      <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={\`h-2 w-8 rounded-full transition-colors \${
+              index === currentSlide ? 'bg-white' : 'bg-white/50'
+            }\`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default LuxuryFashionHero;`,
+
+  'TechStoreHero.tsx': `import { useState, useEffect } from 'react';
+
+const stats = [
+  { label: 'Happy Customers', value: '50K+' },
+  { label: 'Products', value: '1000+' },
+  { label: 'Countries', value: '30+' }
+];
+
+const TechStoreHero = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  return (
+    <div 
+      className="relative h-screen w-full"
+      style={{
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}
+    >
+      <div className="flex h-full flex-col items-center justify-center text-white">
+        <div className={\`opacity-\${isVisible ? '100' : '0'} transform translate-y-\${isVisible ? '0' : '5'} transition-all duration-1000\`}>
+          <h1 className="mb-6 text-7xl font-bold text-center">Future is Now</h1>
+          <p className="mb-8 text-xl font-light text-center">Experience tomorrow's technology today</p>
+          
+          <div className="mb-12 flex justify-center gap-12">
+            {stats.map((stat, index) => (
+              <div
+                key={index}
+                className={\`opacity-\${isVisible ? '100' : '0'} transform translate-y-\${isVisible ? '0' : '5'} transition-all duration-1000 delay-\${200 + index * 100}\`}
+              >
+                <div className="text-4xl font-bold text-blue-400">{stat.value}</div>
+                <div className="text-sm text-gray-300">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+          
+          <button className={\`opacity-\${isVisible ? '100' : '0'} transition-opacity duration-1000 delay-700 mx-auto block rounded-full bg-blue-500 px-8 py-3 text-lg font-medium transition-colors hover:bg-blue-600\`}>
+            Shop Latest Gadgets
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default TechStoreHero;`,
+
+  'FurnitureStoreHero.tsx': `const FurnitureStoreHero = () => {
+  return (
+    <div className="grid h-screen grid-cols-1 md:grid-cols-2 bg-[#F6F6F7]">
+      <div className="flex items-center justify-center p-8 md:p-16">
+        <div>
+          <h1 className="mb-6 text-4xl md:text-6xl font-light leading-tight text-gray-900">
+            Create Your
+            <br />
+            <span className="font-bold">Perfect Space</span>
+          </h1>
+          <p className="mb-8 text-lg md:text-xl text-gray-600">
+            Curated furniture collections for modern living
+          </p>
+          <button className="rounded-none bg-gray-900 px-6 md:px-8 py-3 text-base md:text-lg font-medium text-white transition-colors hover:bg-gray-800">
+            Explore Collections
+          </button>
+        </div>
+      </div>
+      
+      <div 
+        className="relative h-64 md:h-full"
+        style={{
+          backgroundImage: 'url(https://images.unsplash.com/photo-1486718448742-163732cd1544)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      />
+    </div>
+  );
+};
+
+export default FurnitureStoreHero;`,
+
+  // ... Add more components in the same format
+};
+
 const Index = () => {
   const [currentCategory, setCurrentCategory] = useState(0);
 
   const handleCopyCode = async (componentPath: string) => {
     try {
-      const response = await fetch(`/src/components/heroes/${componentPath}`);
-      if (!response.ok) throw new Error('Failed to fetch component code');
-      
-      const code = await response.text();
-      
-      // Create a complete, self-contained component
-      const completeCode = `import { motion } from 'framer-motion';
-import { Button } from './ui/button'; // Assuming you have shadcn/ui setup
+      const componentCode = heroComponents[componentPath];
+      if (!componentCode) {
+        throw new Error('Component code not found');
+      }
 
-// You'll need these packages installed:
-// - framer-motion
-// - @radix-ui/react-slot (for shadcn/ui Button)
-// - clsx and tailwind-merge (for shadcn/ui utilities)
-// - tailwindcss (with @tailwindcss/typography plugin)
-
-${code}`;
-
-      await navigator.clipboard.writeText(completeCode);
+      await navigator.clipboard.writeText(componentCode);
       toast.success("Ready-to-use component code copied to clipboard!");
     } catch (error) {
       console.error('Failed to copy code:', error);
