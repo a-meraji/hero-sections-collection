@@ -298,7 +298,7 @@ const Carousels = () => {
           <p><code>orientation?: "horizontal" | "vertical"</code></p>
           <p><code>opts?: CarouselOptions</code></p>
           <p><code>plugins?: CarouselPlugin</code></p>
-          <p><code>setApi?: (api: CarouselApi) => void</code></p>
+          <p><code>setApi?: (api: CarouselApi) ={">"} void</code></p>
         </CardContent>
       </Card>
     </CarouselItem>
@@ -316,7 +316,7 @@ const Carousels = () => {
                       <p><code>orientation?: "horizontal" | "vertical"</code></p>
                       <p><code>opts?: CarouselOptions</code></p>
                       <p><code>plugins?: CarouselPlugin</code></p>
-                      <p><code>setApi?: (api: CarouselApi) => void</code></p>
+                      <p><code>setApi?: (api: CarouselApi) ={">"} void</code></p>
                     </div>
                   </div>
                 </div>
