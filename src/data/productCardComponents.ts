@@ -1,4 +1,103 @@
 export const productCardComponents = {
+  'SimpleProductCard.tsx': `import { Badge } from "@/components/ui/badge"
+
+export const SimpleProductCard = () => {
+  return (
+    <div className="overflow-hidden rounded-lg border bg-card transition-colors hover:bg-accent">
+      <div className="relative aspect-square">
+        <img
+          src="https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=500&q=80"
+          alt="Product"
+          className="h-full w-full object-cover"
+        />
+        <Badge className="absolute right-2 top-2" variant="secondary">New</Badge>
+      </div>
+      <div className="p-4">
+        <h3 className="font-medium">Simple Product Title</h3>
+        <p className="mt-1 text-sm text-muted-foreground">$79</p>
+      </div>
+    </div>
+  )
+}`,
+  'ModernProductCard.tsx': `import { Heart, ShoppingCart } from "lucide-react"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+
+export const ModernProductCard = () => {
+  return (
+    <div className="group relative rounded-xl border p-3 hover:shadow-lg transition-shadow">
+      <div className="aspect-square overflow-hidden rounded-lg">
+        <img
+          src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=500&q=80"
+          alt="Product"
+          className="h-full w-full object-cover"
+        />
+        <Badge className="absolute right-5 top-5 bg-red-500">-20%</Badge>
+      </div>
+      <div className="mt-4 space-y-2">
+        <div className="flex justify-between">
+          <div>
+            <p className="text-xs text-muted-foreground">Tech Brand</p>
+            <h3 className="font-semibold">Smart Robot Assistant</h3>
+          </div>
+          <Button size="icon" variant="ghost">
+            <Heart className="h-4 w-4" />
+          </Button>
+        </div>
+        <div className="flex items-center justify-between">
+          <div>
+            <p className="text-sm line-through text-muted-foreground">$999</p>
+            <p className="text-lg font-bold">$799</p>
+          </div>
+          <Button size="sm">
+            <ShoppingCart className="mr-2 h-4 w-4" />
+            Add to Cart
+          </Button>
+        </div>
+      </div>
+    </div>
+  )
+}`,
+  'LuxuryProductCard.tsx': `import { Heart, ShoppingCart } from "lucide-react"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+
+export const LuxuryProductCard = () => {
+  return (
+    <div className="group overflow-hidden rounded-xl border bg-card">
+      <div className="relative">
+        <div className="aspect-square overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=500&q=80"
+            alt="Product"
+            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+          />
+        </div>
+        <Badge className="absolute left-3 top-3" variant="secondary">Limited Edition</Badge>
+        <Button size="icon" variant="secondary" className="absolute right-3 top-3">
+          <Heart className="h-4 w-4" />
+        </Button>
+      </div>
+      <div className="p-6">
+        <div className="space-y-1">
+          <h3 className="font-serif text-xl">Luxury Watch Collection</h3>
+          <p className="text-sm text-muted-foreground">Premium Series 2024</p>
+        </div>
+        <div className="mt-4 flex items-center justify-between">
+          <div>
+            <p className="text-2xl font-semibold">$1,299</p>
+            <p className="text-sm text-muted-foreground">Free shipping</p>
+          </div>
+          <Button>
+            <ShoppingCart className="mr-2 h-4 w-4" />
+            Purchase
+          </Button>
+        </div>
+      </div>
+    </div>
+  )
+}`,
+
   'BorderlessProductCard.tsx': `import { useState } from "react"
 import { Heart, ShoppingCart } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
@@ -467,4 +566,5 @@ export const CompactProductCard = () => {
     </div>
   )
 }`
+
 };
