@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import { MainSidebar } from "@/components/MainSidebar"
-import { Index } from "@/pages/Index"
-import { Carousels } from "@/pages/Carousels"
-import { ProductCards } from "@/pages/ProductCards"
+import Index from "@/pages/Index"
+import Carousels from "@/pages/Carousels"
+import ProductCards from "@/pages/ProductCards"
 import ProductPages from "@/pages/ProductPages"
-import { NotFound } from "@/pages/NotFound"
+import NotFound from "@/pages/NotFound"
 
 function App() {
   return (
