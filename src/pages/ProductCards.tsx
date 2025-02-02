@@ -13,6 +13,9 @@ import { MinimalistInteractiveCard } from "@/components/product-cards/Minimalist
 import { ElegantInteractiveCard } from "@/components/product-cards/ElegantInteractiveCard"
 import { ModernInteractiveCard } from "@/components/product-cards/ModernInteractiveCard"
 import { SimpleInteractiveCard } from "@/components/product-cards/SimpleInteractiveCard"
+import { GradientProductCard } from "@/components/product-cards/GradientProductCard"
+import { BorderlessProductCard } from "@/components/product-cards/BorderlessProductCard"
+import { GlassProductCard } from "@/components/product-cards/GlassProductCard"
 
 const ProductCards = () => {
   return (
@@ -78,6 +81,18 @@ const ProductCards = () => {
         <div>
           <h2 className="mb-4 text-lg font-semibold">Simple Interactive</h2>
           <SimpleInteractiveCard />
+        </div>
+        <div>
+          <h2 className="mb-4 text-lg font-semibold">Gradient Style</h2>
+          <GradientProductCard />
+        </div>
+        <div>
+          <h2 className="mb-4 text-lg font-semibold">Borderless Style</h2>
+          <BorderlessProductCard />
+        </div>
+        <div>
+          <h2 className="mb-4 text-lg font-semibold">Glass Style</h2>
+          <GlassProductCard />
         </div>
       </div>
     </div>
