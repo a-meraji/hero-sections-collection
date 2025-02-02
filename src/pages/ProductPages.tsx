@@ -19,10 +19,8 @@ export default function ProductPages() {
             title="Minimal Product Page"
             description="A clean and minimal product page layout focusing on essential information."
             component={<MinimalProductPage />}
-            code={`// Minimal Product Page Code`}
-          >
-            <MinimalProductPage />
-          </CodeExampleBlock>
+            code="MinimalProductPage.tsx"
+          />
         </section>
 
         <section>
@@ -30,10 +28,8 @@ export default function ProductPages() {
             title="Modern Product Page"
             description="A modern product page with advanced features and interactive elements."
             component={<ModernProductPage />}
-            code={`// Modern Product Page Code`}
-          >
-            <ModernProductPage />
-          </CodeExampleBlock>
+            code="ModernProductPage.tsx"
+          />
         </section>
 
         <section>
@@ -41,10 +37,8 @@ export default function ProductPages() {
             title="Luxury Product Page"
             description="An elegant product page design for luxury items."
             component={<LuxuryProductPage />}
-            code={`// Luxury Product Page Code`}
-          >
-            <LuxuryProductPage />
-          </CodeExampleBlock>
+            code="LuxuryProductPage.tsx"
+          />
         </section>
 
         <section>
@@ -52,10 +46,8 @@ export default function ProductPages() {
             title="Tech Product Page"
             description="A feature-rich product page for tech products with detailed specifications."
             component={<TechProductPage />}
-            code={`// Tech Product Page Code`}
-          >
-            <TechProductPage />
-          </CodeExampleBlock>
+            code="TechProductPage.tsx"
+          />
         </section>
 
         <section>
@@ -63,10 +55,8 @@ export default function ProductPages() {
             title="Detailed Product Page"
             description="A comprehensive product page with structured information and multiple sections."
             component={<DetailedProductPage />}
-            code={`// Detailed Product Page Code`}
-          >
-            <DetailedProductPage />
-          </CodeExampleBlock>
+            code="DetailedProductPage.tsx"
+          />
         </section>
       </div>
     </div>

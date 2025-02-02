@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Copy } from "lucide-react"
 import { toast } from "sonner"
+import { productPageComponents } from "@/data/productPageComponents"
 
 interface CodeExampleBlockProps {
   title: string;
@@ -10,10 +11,16 @@ interface CodeExampleBlockProps {
   children: React.ReactNode;
 }
 
-export const CodeExampleBlock = ({ title, description, code, component, children }: CodeExampleBlockProps) => {
+export const CodeExampleBlock = ({ title, description, code, component }: CodeExampleBlockProps) => {
   const copyCode = () => {
-    navigator.clipboard.writeText(code)
-    toast.success("Code copied to clipboard!")
+    // Get the actual component code from our data
+    const componentCode = productPageComponents[code as keyof typeof productPageComponents]
+    if (componentCode) {
+      navigator.clipboard.writeText(componentCode)
+      toast.success("Code copied to clipboard!")
+    } else {
+      toast.error("Could not find component code")
+    }
   }
 
   return (
