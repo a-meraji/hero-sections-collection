@@ -1,0 +1,32 @@
+import { Button } from "@/components/ui/button"
+import { Copy } from "lucide-react"
+import { toast } from "sonner"
+
+interface CodeExampleBlockProps {
+  title: string;
+  code: string;
+  children: React.ReactNode;
+}
+
+export const CodeExampleBlock = ({ title, code, children }: CodeExampleBlockProps) => {
+  const copyCode = () => {
+    navigator.clipboard.writeText(code)
+    toast.success("Code copied to clipboard!")
+  }
+
+  return (
+    <section className="space-y-4">
+      <div className="flex items-center justify-between">
+        <h2 className="text-2xl font-bold">{title}</h2>
+        <Button variant="outline" size="sm" onClick={copyCode}>
+          <Copy className="mr-2 h-4 w-4" />
+          Copy Code
+        </Button>
+      </div>
+      <pre className="bg-muted p-4 rounded-lg overflow-x-auto">
+        <code>{code}</code>
+      </pre>
+      {children}
+    </section>
+  )
+}
