@@ -54,7 +54,7 @@ export function MainSidebar() {
         <SidebarMenu>
           {navigationItems.map((item) => (
             <Link key={item.url} to={item.url}>
-              <SidebarMenuItem active={location.pathname === item.url}>
+              <SidebarMenuItem data-active={location.pathname === item.url}>
                 <SidebarMenuButton>
                   <item.icon className="mr-2 h-4 w-4" />
                   {item.title}
