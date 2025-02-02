@@ -19,10 +19,11 @@ import { BorderlessProductCard } from "@/components/product-cards/BorderlessProd
 import { GlassProductCard } from "@/components/product-cards/GlassProductCard";
 import { HeroShowcase } from "@/components/HeroShowcase";
 import { toast } from "sonner";
+import { productCardComponents } from "@/data/productCardComponents";
 
 const ProductCards = () => {
   const handleCopyCode = (fileName: string) => {
-    const code = heroComponents[fileName];
+    const code = productCardComponents[fileName];
     if (code) {
       navigator.clipboard.writeText(code);
       toast.success('Code copied to clipboard!');
