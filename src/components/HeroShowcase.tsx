@@ -11,7 +11,7 @@ interface HeroShowcaseProps {
   onCopyCode: (fileName: string) => void;
 }
 
-const HeroShowcase = ({ components, onCopyCode }: HeroShowcaseProps) => {
+export const HeroShowcase = ({ components, onCopyCode }: HeroShowcaseProps) => {
   return (
     <div className="container mx-auto space-y-32">
       {components.map((item, index) => (
@@ -36,5 +36,3 @@ const HeroShowcase = ({ components, onCopyCode }: HeroShowcaseProps) => {
     </div>
   );
 };
-
-export default HeroShowcase;
