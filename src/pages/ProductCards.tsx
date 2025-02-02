@@ -8,6 +8,11 @@ import { HoverEffectProductCard } from "@/components/product-cards/HoverEffectPr
 import { VariantsProductCard } from "@/components/product-cards/VariantsProductCard"
 import { SimpleProductCard } from "@/components/product-cards/SimpleProductCard"
 import { FeaturedProductCard } from "@/components/product-cards/FeaturedProductCard"
+import { InteractiveProductCard } from "@/components/product-cards/InteractiveProductCard"
+import { MinimalistInteractiveCard } from "@/components/product-cards/MinimalistInteractiveCard"
+import { ElegantInteractiveCard } from "@/components/product-cards/ElegantInteractiveCard"
+import { ModernInteractiveCard } from "@/components/product-cards/ModernInteractiveCard"
+import { SimpleInteractiveCard } from "@/components/product-cards/SimpleInteractiveCard"
 
 const ProductCards = () => {
   return (
@@ -53,6 +58,26 @@ const ProductCards = () => {
         <div>
           <h2 className="mb-4 text-lg font-semibold">Featured Style</h2>
           <FeaturedProductCard />
+        </div>
+        <div>
+          <h2 className="mb-4 text-lg font-semibold">Interactive Style</h2>
+          <InteractiveProductCard />
+        </div>
+        <div>
+          <h2 className="mb-4 text-lg font-semibold">Minimalist Interactive</h2>
+          <MinimalistInteractiveCard />
+        </div>
+        <div>
+          <h2 className="mb-4 text-lg font-semibold">Elegant Interactive</h2>
+          <ElegantInteractiveCard />
+        </div>
+        <div>
+          <h2 className="mb-4 text-lg font-semibold">Modern Interactive</h2>
+          <ModernInteractiveCard />
+        </div>
+        <div>
+          <h2 className="mb-4 text-lg font-semibold">Simple Interactive</h2>
+          <SimpleInteractiveCard />
         </div>
       </div>
     </div>
