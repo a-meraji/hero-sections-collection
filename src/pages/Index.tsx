@@ -337,7 +337,325 @@ export default CosmeticsHero;`,
   );
 };
 
-export default SportswearHero;`
+export default SportswearHero;`,
+
+  'TechStoreHero2.tsx': `import { Button } from "@/components/ui/button";
+
+const TechStoreHero2 = () => {
+  return (
+    <div className="relative min-h-[80vh] bg-gradient-to-r from-blue-900 to-purple-900 text-white overflow-hidden">
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b')] bg-cover bg-center mix-blend-overlay opacity-20" />
+      </div>
+      <div className="relative container mx-auto px-4 py-24">
+        <div className="max-w-3xl mx-auto text-center">
+          <h1 className="text-5xl font-bold mb-6">
+            The Future of Technology
+            <span className="block text-blue-400">Is Here Today</span>
+          </h1>
+          <p className="text-xl text-blue-200 mb-8">
+            Discover cutting-edge devices and innovative solutions that transform the way you live and work.
+          </p>
+          <div className="space-x-4">
+            <Button className="bg-blue-500 hover:bg-blue-600">Shop Now</Button>
+            <Button variant="outline" className="border-white text-white hover:bg-white/10">
+              Learn More
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default TechStoreHero2;`,
+
+  'TechStoreHero3.tsx': `import { Button } from "@/components/ui/button";
+
+const TechStoreHero3 = () => {
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[80vh]">
+      <div className="order-2 lg:order-1 flex items-center p-12 bg-gray-100">
+        <div className="max-w-xl">
+          <span className="text-blue-600 font-medium mb-2 block">New Release</span>
+          <h1 className="text-5xl font-bold mb-6">
+            Smart Living
+            <span className="block text-blue-600">Made Simple</span>
+          </h1>
+          <p className="text-gray-600 mb-8">
+            Transform your home with our latest collection of smart devices and connected solutions.
+          </p>
+          <div className="space-x-4">
+            <Button className="bg-blue-600 hover:bg-blue-700">Shop Devices</Button>
+            <Button variant="outline">Watch Demo</Button>
+          </div>
+        </div>
+      </div>
+      <div className="order-1 lg:order-2 bg-[url('https://images.unsplash.com/photo-1518770660439-4636190af475')] bg-cover bg-center min-h-[400px]" />
+    </div>
+  );
+};
+
+export default TechStoreHero3;`,
+
+  'FurnitureStoreHero2.tsx': `import { Button } from "@/components/ui/button";
+
+const FurnitureStoreHero2 = () => {
+  return (
+    <div className="relative min-h-[80vh] bg-[#f4f1ec] overflow-hidden">
+      <div className="container mx-auto px-4 py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span className="text-amber-600 font-medium mb-2 block">New Collection</span>
+            <h1 className="text-5xl font-light mb-6">
+              Modern Living
+              <span className="block font-bold">Redefined</span>
+            </h1>
+            <p className="text-gray-600 mb-8">
+              Discover furniture pieces that blend comfort with contemporary design, creating spaces that inspire.
+            </p>
+            <div className="space-x-4">
+              <Button className="bg-amber-700 hover:bg-amber-800">View Collection</Button>
+              <Button variant="outline">Our Story</Button>
+            </div>
+          </div>
+          <div className="relative h-[500px]">
+            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1721322800607-8c38375eef04')] bg-cover bg-center rounded-lg shadow-2xl" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default FurnitureStoreHero2;`,
+
+  'FurnitureStoreHero3.tsx': `import { Button } from "@/components/ui/button";
+
+const FurnitureStoreHero3 = () => {
+  return (
+    <div className="relative min-h-[80vh] bg-white">
+      <div className="absolute inset-0 bg-gradient-to-r from-amber-50 to-amber-100" />
+      <div className="relative container mx-auto px-4 py-24 text-center">
+        <div className="max-w-3xl mx-auto">
+          <h1 className="text-6xl font-serif mb-6">
+            Artisanal Furniture
+            <span className="block text-amber-700">Handcrafted with Care</span>
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Each piece tells a story of craftsmanship and dedication to quality.
+          </p>
+          <div className="space-x-4">
+            <Button className="bg-amber-900 hover:bg-amber-800">Browse Collection</Button>
+            <Button variant="outline" className="border-amber-900 text-amber-900">
+              Custom Orders
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default FurnitureStoreHero3;`,
+
+  'JewelryStoreHero2.tsx': `import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+
+const JewelryStoreHero2 = () => {
+  return (
+    <div className="relative min-h-[80vh] bg-[#1a1a1a] overflow-hidden">
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338')] bg-cover bg-center opacity-20" />
+      <div className="relative container mx-auto px-4 py-24 flex items-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="max-w-2xl text-white"
+        >
+          <h1 className="text-6xl font-serif tracking-tight mb-6">
+            Exquisite Collection
+            <span className="block font-light">Timeless Beauty</span>
+          </h1>
+          <p className="text-lg text-gray-300 mb-8">
+            Discover our handcrafted jewelry pieces that blend traditional craftsmanship with modern design.
+          </p>
+          <div className="space-x-4">
+            <Button className="bg-white text-black hover:bg-gray-200">View Collection</Button>
+            <Button variant="outline" className="text-white border-white hover:bg-white/10">Book Consultation</Button>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+export default JewelryStoreHero2;`,
+
+  'JewelryStoreHero3.tsx': `import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+
+const JewelryStoreHero3 = () => {
+  return (
+    <div className="relative min-h-[80vh] bg-[#2a2a2a] overflow-hidden">
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f')] bg-cover bg-center opacity-20" />
+      <div className="relative container mx-auto px-4 py-24 flex items-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="max-w-2xl text-white"
+        >
+          <h1 className="text-6xl font-serif tracking-tight mb-6">
+            Artisan Collection
+            <span className="block font-light">Handcrafted Beauty</span>
+          </h1>
+          <p className="text-lg text-gray-300 mb-8">
+            Each piece tells a unique story, crafted with passion and precision by our master artisans.
+          </p>
+          <div className="space-x-4">
+            <Button className="bg-amber-500 text-black hover:bg-amber-400">Explore Now</Button>
+            <Button variant="outline" className="border-amber-500 text-amber-500 hover:bg-amber-950/50">Custom Orders</Button>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+export default JewelryStoreHero3;`,
+
+  'CosmeticsHero2.tsx': `import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+
+const CosmeticsHero2 = () => {
+  return (
+    <div className="relative min-h-[80vh] bg-pink-50 overflow-hidden">
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1596462502278-27bfdc403348')] bg-cover bg-center opacity-20" />
+      <div className="relative container mx-auto px-4 py-24 flex items-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="max-w-2xl"
+        >
+          <h1 className="text-6xl font-serif tracking-tight mb-6">
+            Natural Beauty
+            <span className="block font-light">Pure Radiance</span>
+          </h1>
+          <p className="text-lg text-gray-600 mb-8">
+            Discover our collection of natural and organic beauty products that enhance your natural glow.
+          </p>
+          <div className="space-x-4">
+            <Button className="bg-pink-500 text-white hover:bg-pink-600">Shop Now</Button>
+            <Button variant="outline" className="border-pink-500 text-pink-500 hover:bg-pink-50">Learn More</Button>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+export default CosmeticsHero2;`,
+
+  'CosmeticsHero3.tsx': `import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+
+const CosmeticsHero3 = () => {
+  return (
+    <div className="relative min-h-[80vh] bg-purple-900 overflow-hidden">
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1612817288484-6f916006741a')] bg-cover bg-center opacity-30" />
+      <div className="relative container mx-auto px-4 py-24 flex items-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="max-w-2xl text-white"
+        >
+          <h1 className="text-6xl font-serif tracking-tight mb-6">
+            Luxury Skincare
+            <span className="block font-light">For Your Beauty</span>
+          </h1>
+          <p className="text-lg text-purple-200 mb-8">
+            Experience the transformative power of premium skincare products designed for your unique beauty.
+          </p>
+          <div className="space-x-4">
+            <Button className="bg-purple-500 text-white hover:bg-purple-600">Explore Collection</Button>
+            <Button variant="outline" className="border-purple-300 text-purple-300 hover:bg-purple-800/50">Book Consultation</Button>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+export default CosmeticsHero3;`,
+
+  'SportswearHero2.tsx': `import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+
+const SportswearHero2 = () => {
+  return (
+    <div className="relative min-h-[80vh] bg-gray-900 overflow-hidden">
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438')] bg-cover bg-center opacity-40" />
+      <div className="relative container mx-auto px-4 py-24 flex items-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="max-w-2xl text-white"
+        >
+          <h1 className="text-6xl font-bold tracking-tight mb-6">
+            PUSH YOUR LIMITS
+            <span className="block font-light">Break Records</span>
+          </h1>
+          <p className="text-lg text-gray-300 mb-8">
+            High-performance sportswear designed to help you achieve your personal best.
+          </p>
+          <div className="space-x-4">
+            <Button className="bg-red-600 text-white hover:bg-red-700">Shop Collection</Button>
+            <Button variant="outline" className="border-white text-white hover:bg-white/10">Find Store</Button>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+export default SportswearHero2;`,
+
+  'SportswearHero3.tsx': `import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+
+const SportswearHero3 = () => {
+  return (
+    <div className="relative min-h-[80vh] bg-blue-900 overflow-hidden">
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1574680096145-d05b474e2155')] bg-cover bg-center opacity-30" />
+      <div className="relative container mx-auto px-4 py-24 flex items-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="max-w-2xl text-white"
+        >
+          <h1 className="text-6xl font-bold tracking-tight mb-6">
+            TRAIN HARDER
+            <span className="block font-light">Achieve More</span>
+          </h1>
+          <p className="text-lg text-blue-200 mb-8">
+            Professional grade sportswear engineered for maximum performance and comfort.
+          </p>
+          <div className="space-x-4">
+            <Button className="bg-blue-600 text-white hover:bg-blue-700">View Latest</Button>
+            <Button variant="outline" className="border-blue-300 text-blue-300 hover:bg-blue-800/50">Size Guide</Button>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+export default SportswearHero3;`
 };
 
 const Index = () => {
