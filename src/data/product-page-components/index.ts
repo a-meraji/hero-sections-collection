@@ -16,4 +16,9 @@ export const productPageComponents = {
   "MinimalProductPage.tsx": minimalProductPage,
   "ModernProductPage.tsx": modernProductPage,
   "TechProductPage.tsx": techProductPage,
+  "MinimalistProductPage.tsx": `// Component code will be added here`,
+  "GalleryProductPage.tsx": `// Component code will be added here`,
+  "GridProductPage.tsx": `// Component code will be added here`,
+  "CompactProductPage.tsx": `// Component code will be added here`,
+  "FullscreenProductPage.tsx": `// Component code will be added here`,
 }
