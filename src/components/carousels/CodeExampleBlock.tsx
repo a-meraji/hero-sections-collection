@@ -6,10 +6,11 @@ interface CodeExampleBlockProps {
   title: string;
   description?: string;
   code: string;
+  component: React.ReactNode;
   children: React.ReactNode;
 }
 
-export const CodeExampleBlock = ({ title, description, code, children }: CodeExampleBlockProps) => {
+export const CodeExampleBlock = ({ title, description, code, component, children }: CodeExampleBlockProps) => {
   const copyCode = () => {
     navigator.clipboard.writeText(code)
     toast.success("Code copied to clipboard!")
@@ -32,6 +33,7 @@ export const CodeExampleBlock = ({ title, description, code, children }: CodeExa
       <pre className="bg-muted p-4 rounded-lg overflow-x-auto">
         <code>{code}</code>
       </pre>
+      {component}
       {children}
     </section>
   )
