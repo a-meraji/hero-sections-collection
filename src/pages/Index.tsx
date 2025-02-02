@@ -30,8 +30,21 @@ const Index = () => {
       if (!response.ok) throw new Error('Failed to fetch component code');
       
       const code = await response.text();
-      await navigator.clipboard.writeText(code);
-      toast.success("Component code copied to clipboard!");
+      
+      // Create a complete, self-contained component
+      const completeCode = `import { motion } from 'framer-motion';
+import { Button } from './ui/button'; // Assuming you have shadcn/ui setup
+
+// You'll need these packages installed:
+// - framer-motion
+// - @radix-ui/react-slot (for shadcn/ui Button)
+// - clsx and tailwind-merge (for shadcn/ui utilities)
+// - tailwindcss (with @tailwindcss/typography plugin)
+
+${code}`;
+
+      await navigator.clipboard.writeText(completeCode);
+      toast.success("Ready-to-use component code copied to clipboard!");
     } catch (error) {
       console.error('Failed to copy code:', error);
       toast.error("Failed to copy component code");
