@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { toast } from "sonner";
 import CategoryNav from '@/components/CategoryNav';
-import HeroShowcase from '@/components/HeroShowcase';
+import { HeroShowcase } from '@/components/HeroShowcase';
 import LuxuryFashionHero from '@/components/heroes/LuxuryFashionHero';
 import LuxuryFashionHero2 from '@/components/heroes/LuxuryFashionHero2';
 import LuxuryFashionHero3 from '@/components/heroes/LuxuryFashionHero3';
