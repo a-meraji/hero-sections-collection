@@ -1,3 +1,9 @@
+import { detailedProductPage } from './detailed'
+import { luxuryProductPage } from './luxury'
+import { minimalProductPage } from './minimal'
+import { modernProductPage } from './modern'
+import { techProductPage } from './tech'
+
 export { detailedProductPage } from './detailed'
 export { luxuryProductPage } from './luxury'
 export { minimalProductPage } from './minimal'
