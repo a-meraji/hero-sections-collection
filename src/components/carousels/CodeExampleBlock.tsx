@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Copy } from "lucide-react"
 import { toast } from "sonner"
-import { productPageComponents } from "@/data/productPageComponents"
+import { productPageComponents } from "@/data/product-page-components"
 
 interface CodeExampleBlockProps {
   title: string;

@@ -1,4 +1,4 @@
-import { Heart, ShoppingCart, Check } from "lucide-react"
+export const detailedProductPage = `import { Heart, ShoppingCart, Check } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 
@@ -49,4 +49,4 @@ export const DetailedProductPage = () => {
       </div>
     </div>
   )
-}
+}`
