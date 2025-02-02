@@ -1,6 +1,7 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { Card } from "@/components/ui/card"
 import { useState } from "react"
+import { type CarouselApi } from "@/components/ui/carousel"
 
 const images = [
   {
@@ -22,14 +23,20 @@ const images = [
 
 export const ImageGalleryCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [api, setApi] = useState<CarouselApi>()
 
-  const handleSelect = (index: number) => {
-    setCurrentIndex(index)
+  const handleSelect = () => {
+    if (!api) return
+    setCurrentIndex(api.selectedScrollSnap())
   }
 
   return (
     <div className="space-y-4">
-      <Carousel className="w-full" onSelect={handleSelect}>
+      <Carousel 
+        className="w-full" 
+        onSelect={handleSelect}
+        setApi={setApi}
+      >
         <CarouselContent>
           {images.map((image, index) => (
             <CarouselItem key={index}>
