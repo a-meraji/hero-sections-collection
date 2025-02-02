@@ -23,30 +23,30 @@ import {
 export const TechProductPage = () => {
   const [mainImage, setMainImage] = useState(0)
   const [quantity, setQuantity] = useState(1)
-  const [selectedStorage, setSelectedStorage] = useState("256GB")
   const [isFavorite, setIsFavorite] = useState(false)
 
   const images = [
-    "https://images.unsplash.com/photo-1487887235947-a955ef187fcc?w=500&q=80",
-    "https://images.unsplash.com/photo-1487887235947-a955ef187fcc?w=500&q=80",
-    "https://images.unsplash.com/photo-1487887235947-a955ef187fcc?w=500&q=80",
+    "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=500&q=80",
+    "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=500&q=80",
+    "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=500&q=80",
   ]
 
-  const storageOptions = [
-    { size: "128GB", price: 999 },
-    { size: "256GB", price: 1099 },
-    { size: "512GB", price: 1299 },
+  const features = [
+    "High-resolution display",
+    "Long-lasting battery life",
+    "Fast charging",
+    "Lightweight design",
   ]
 
   return (
     <div className="mx-auto max-w-7xl px-4">
       <div className="grid gap-8 lg:grid-cols-2">
-        <div className="sticky top-8 space-y-4">
-          <div className="aspect-square overflow-hidden rounded-2xl bg-muted">
+        <div className="space-y-6">
+          <div className="aspect-[3/4] overflow-hidden">
             <img
               src={images[mainImage]}
               alt="Product main"
-              className="h-full w-full object-cover transition-transform duration-300 hover:scale-125"
+              className="h-full w-full object-cover transition-transform duration-300 hover:scale-110"
             />
           </div>
           <div className="grid grid-cols-3 gap-4">
@@ -54,14 +54,14 @@ export const TechProductPage = () => {
               <button
                 key={i}
                 onClick={() => setMainImage(i)}
-                className={\`overflow-hidden rounded-xl \${
+                className={\`overflow-hidden \${
                   mainImage === i ? "ring-2 ring-primary" : ""
                 }\`}
               >
                 <img
                   src={image}
                   alt={\`Product view \${i + 1}\`}
-                  className="aspect-square object-cover"
+                  className="aspect-[3/4] object-cover"
                 />
               </button>
             ))}
@@ -70,16 +70,39 @@ export const TechProductPage = () => {
 
         <div className="space-y-8">
           <div>
-            <div className="flex items-start justify-between">
-              <div>
-                <Badge variant="secondary">New Release</Badge>
-                <h1 className="mt-2 text-4xl font-bold">
-                  Pro Drone with 4K Camera
-                </h1>
-                <p className="mt-1 text-xl text-muted-foreground">
-                  Professional Series
-                </p>
-              </div>
+            <h1 className="font-serif text-4xl">Tech Gadget 2024</h1>
+            <p className="mt-2 text-lg text-muted-foreground">
+              The latest in technology
+            </p>
+          </div>
+
+          <div className="space-y-2">
+            <p className="text-4xl font-light">$999.00</p>
+            <p className="text-sm text-muted-foreground">
+              Including complimentary shipping & returns
+            </p>
+          </div>
+
+          <Separator className="bg-muted/50" />
+
+          <div className="space-y-6">
+            <div>
+              <h3 className="mb-3 font-medium">Features</h3>
+              <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
+                {features.map((feature, i) => (
+                  <li key={i} className="flex items-center gap-2">
+                    <Check className="h-4 w-4 text-primary" />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="flex gap-4">
+              <Button className="flex-1 rounded-full" size="lg">
+                <ShoppingCart className="mr-2 h-4 w-4" />
+                Add to Cart
+              </Button>
               <Button
                 variant="outline"
                 size="icon"
@@ -90,136 +113,7 @@ export const TechProductPage = () => {
                 />
               </Button>
             </div>
-
-            <div className="mt-4 flex items-center gap-4">
-              <div className="flex">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star
-                    key={i}
-                    className="h-5 w-5 fill-primary text-primary"
-                  />
-                ))}
-              </div>
-              <p className="text-sm text-muted-foreground">
-                4.9 (2,389 reviews)
-              </p>
-            </div>
           </div>
-
-          <div className="space-y-4 rounded-xl bg-muted/50 p-4">
-            <div className="flex items-center gap-3">
-              <Shield className="h-5 w-5 text-primary" />
-              <p className="text-sm">2-year warranty included</p>
-            </div>
-            <div className="flex items-center gap-3">
-              <Truck className="h-5 w-5 text-primary" />
-              <p className="text-sm">Free shipping & 30-day returns</p>
-            </div>
-            <div className="flex items-center gap-3">
-              <Check className="h-5 w-5 text-primary" />
-              <p className="text-sm">In stock - ships within 24 hours</p>
-            </div>
-          </div>
-
-          <div className="space-y-4">
-            <h3 className="font-medium">Storage Capacity</h3>
-            <div className="grid gap-3">
-              {storageOptions.map((option) => (
-                <button
-                  key={option.size}
-                  onClick={() => setSelectedStorage(option.size)}
-                  className={\`flex items-center justify-between rounded-lg border p-4 \${
-                    selectedStorage === option.size
-                      ? "border-primary bg-primary/5"
-                      : "border-input hover:bg-accent"
-                  }\`}
-                >
-                  <span className="font-medium">{option.size}</span>
-                  <span>${option.price}</span>
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h3 className="mb-2 font-medium">Quantity</h3>
-            <div className="flex w-32 items-center gap-2">
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={() => setQuantity(Math.max(1, quantity - 1))}
-              >
-                <Minus className="h-4 w-4" />
-              </Button>
-              <span className="w-12 text-center">{quantity}</span>
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={() => setQuantity(quantity + 1)}
-              >
-                <Plus className="h-4 w-4" />
-              </Button>
-            </div>
-          </div>
-
-          <div className="space-y-4">
-            <div className="flex items-baseline justify-between">
-              <div>
-                <p className="text-2xl font-bold">
-                  $
-                  {
-                    storageOptions.find(
-                      (option) => option.size === selectedStorage
-                    )?.price
-                  }
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  Free shipping included
-                </p>
-              </div>
-              <Button size="lg" className="px-8">
-                <ShoppingCart className="mr-2 h-4 w-4" />
-                Add to Cart
-              </Button>
-            </div>
-          </div>
-
-          <Separator />
-
-          <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="description">
-              <AccordionTrigger>Description</AccordionTrigger>
-              <AccordionContent>
-                <p className="text-muted-foreground">
-                  Experience aerial photography like never before with our
-                  professional-grade drone. Equipped with a 4K camera and advanced
-                  stabilization technology, capture stunning footage from new
-                  heights.
-                </p>
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="specifications">
-              <AccordionTrigger>Technical Specifications</AccordionTrigger>
-              <AccordionContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>4K Camera with 3-axis gimbal</li>
-                  <li>30 minutes flight time</li>
-                  <li>10km transmission range</li>
-                  <li>Obstacle avoidance system</li>
-                  <li>GPS positioning</li>
-                </ul>
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="shipping">
-              <AccordionTrigger>Shipping Information</AccordionTrigger>
-              <AccordionContent>
-                <p className="text-muted-foreground">
-                  Free express shipping on all orders. Estimated delivery: 2-3
-                  business days.
-                </p>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
         </div>
       </div>
     </div>

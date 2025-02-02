@@ -35,13 +35,13 @@ export const LuxuryProductPage = () => {
               <button
                 key={i}
                 onClick={() => setMainImage(i)}
-                className={\`overflow-hidden \${
+                className={`overflow-hidden ${
                   mainImage === i ? "ring-2 ring-primary" : ""
-                }\`}
+                }`}
               >
                 <img
                   src={image}
-                  alt={\`Product view \${i + 1}\`}
+                  alt={`Product view ${i + 1}`}
                   className="aspect-[3/4] object-cover"
                 />
               </button>
@@ -77,11 +77,11 @@ export const LuxuryProductPage = () => {
                   <button
                     key={size}
                     onClick={() => setSelectedSize(size)}
-                    className={\`h-12 w-12 rounded-full border \${
+                    className={`h-12 w-12 rounded-full border ${
                       selectedSize === size
                         ? "border-primary bg-primary text-primary-foreground"
                         : "border-input hover:bg-accent"
-                    }\`}
+                    }`}
                   >
                     {size}
                   </button>

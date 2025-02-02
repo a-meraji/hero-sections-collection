@@ -75,7 +75,7 @@ export const DetailedProductPage = () => {
               onClick={() => setIsFavorite(!isFavorite)}
             >
               <Heart
-                className={`h-4 w-4 ${isFavorite ? "fill-primary" : ""}`}
+                className={\`h-4 w-4 \${isFavorite ? "fill-primary" : ""}\`}
               />
             </Button>
           </div>
