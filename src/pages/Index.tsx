@@ -5,12 +5,15 @@ import { Button } from '@/components/ui/button';
 import LuxuryFashionHero from '@/components/heroes/LuxuryFashionHero';
 import LuxuryFashionHero2 from '@/components/heroes/LuxuryFashionHero2';
 import LuxuryFashionHero3 from '@/components/heroes/LuxuryFashionHero3';
+import LuxuryFashionHero4 from '@/components/heroes/LuxuryFashionHero4';
 import TechStoreHero from '@/components/heroes/TechStoreHero';
 import TechStoreHero2 from '@/components/heroes/TechStoreHero2';
 import TechStoreHero3 from '@/components/heroes/TechStoreHero3';
+import TechStoreHero4 from '@/components/heroes/TechStoreHero4';
 import FurnitureStoreHero from '@/components/heroes/FurnitureStoreHero';
 import FurnitureStoreHero2 from '@/components/heroes/FurnitureStoreHero2';
 import FurnitureStoreHero3 from '@/components/heroes/FurnitureStoreHero3';
+import FurnitureStoreHero4 from '@/components/heroes/FurnitureStoreHero4';
 import JewelryStoreHero from '@/components/heroes/JewelryStoreHero';
 import JewelryStoreHero2 from '@/components/heroes/JewelryStoreHero2';
 import JewelryStoreHero3 from '@/components/heroes/JewelryStoreHero3';
@@ -20,9 +23,6 @@ import CosmeticsHero3 from '@/components/heroes/CosmeticsHero3';
 import SportswearHero from '@/components/heroes/SportswearHero';
 import SportswearHero2 from '@/components/heroes/SportswearHero2';
 import SportswearHero3 from '@/components/heroes/SportswearHero3';
-import LuxuryFashionHero4 from '@/components/heroes/LuxuryFashionHero4';
-import TechStoreHero4 from '@/components/heroes/TechStoreHero4';
-import FurnitureStoreHero4 from '@/components/heroes/FurnitureStoreHero4';
 
 const heroComponents = {
   'LuxuryFashionHero.tsx': `import { useState, useEffect } from 'react';
@@ -976,8 +976,7 @@ const Index = () => {
       components: [
         { component: <JewelryStoreHero />, name: 'Style 1', file: 'JewelryStoreHero.tsx' },
         { component: <JewelryStoreHero2 />, name: 'Style 2', file: 'JewelryStoreHero2.tsx' },
-        { component: <JewelryStoreHero3 />, name: 'Style 3', file: 'JewelryStoreHero3.tsx' },
-        { component: <JewelryStoreHero4 />, name: 'Style 4', file: 'JewelryStoreHero4.tsx' }
+        { component: <JewelryStoreHero3 />, name: 'Style 3', file: 'JewelryStoreHero3.tsx' }
       ]
     },
     {
