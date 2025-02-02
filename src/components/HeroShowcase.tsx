@@ -28,7 +28,9 @@ const HeroShowcase = ({ components, onCopyCode }: HeroShowcaseProps) => {
               Copy Code
             </Button>
           </div>
-          {item.component}
+          <div className={`${index === 0 ? 'mt-8' : ''}`}>
+            {item.component}
+          </div>
         </div>
       ))}
     </div>
