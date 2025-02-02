@@ -25,49 +25,50 @@ export const InteractiveReview = () => {
   }
 
   return (
-    <Card className="max-w-2xl mx-auto">
-      <div className="p-6">
-        <div className="flex items-start gap-4">
+    <Card className="max-w-[320px] sm:max-w-xl mx-auto">
+      <div className="p-4 sm:p-6">
+        <div className="flex flex-col sm:flex-row items-start gap-4">
           <img
             src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop"
             alt="Reviewer"
-            className="w-12 h-12 rounded-full object-cover"
+            className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
           />
           
           <div className="flex-1">
-            <div className="flex items-start justify-between">
+            <div className="flex flex-col sm:flex-row items-start justify-between gap-2">
               <div>
-                <h3 className="font-semibold">Sophie Anderson</h3>
+                <h3 className="text-base sm:text-lg font-semibold">Sophie Anderson</h3>
                 <div className="flex items-center gap-2">
                   <div className="flex text-yellow-400">
                     {Array(5).fill(null).map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current" />
+                      <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-current" />
                     ))}
                   </div>
-                  <span className="text-sm text-muted-foreground">3 days ago</span>
+                  <span className="text-xs sm:text-sm text-muted-foreground">3 days ago</span>
                 </div>
               </div>
               
-              <Button variant="ghost" size="sm">
-                <Flag className="w-4 h-4" />
+              <Button variant="ghost" size="sm" className="p-1">
+                <Flag className="w-3 h-3 sm:w-4 sm:h-4" />
               </Button>
             </div>
             
-            <p className="mt-4 text-muted-foreground">
+            <p className="mt-4 text-xs sm:text-sm text-muted-foreground">
               "I've tried many similar products, but this one stands out.
               The quality is exceptional and the customer support team was
               incredibly helpful when I had questions. Highly recommend!"
             </p>
             
-            <div className="mt-4 flex flex-wrap items-center gap-4">
+            <div className="mt-4 flex flex-wrap items-start gap-2 sm:gap-4">
               <Button
                 variant="outline"
                 size="sm"
                 onClick={handleHelpful}
                 disabled={hasVoted}
+                className="h-8 px-2 sm:px-4"
               >
-                <ThumbsUp className={`w-4 h-4 mr-1 ${hasVoted ? 'fill-primary' : ''}`} />
-                Helpful ({helpfulCount})
+                <ThumbsUp className={`w-3 h-3 sm:w-4 sm:h-4 mr-1 ${hasVoted ? 'fill-primary' : ''}`} />
+                <span className="text-xs sm:text-sm">Helpful ({helpfulCount})</span>
               </Button>
               
               <Button
@@ -75,18 +76,20 @@ export const InteractiveReview = () => {
                 size="sm"
                 onClick={handleUnhelpful}
                 disabled={hasVoted}
+                className="h-8 px-2 sm:px-4"
               >
-                <ThumbsDown className="w-4 h-4 mr-1" />
-                Not Helpful ({unhelpfulCount})
+                <ThumbsDown className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+                <span className="text-xs sm:text-sm">Not Helpful ({unhelpfulCount})</span>
               </Button>
               
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={() => setIsReplying(!isReplying)}
+                className="h-8 px-2 sm:px-4"
               >
-                <MessageSquare className="w-4 h-4 mr-1" />
-                Reply
+                <MessageSquare className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+                <span className="text-xs sm:text-sm">Reply</span>
               </Button>
             </div>
             
@@ -94,17 +97,23 @@ export const InteractiveReview = () => {
               <div className="mt-4 space-y-4">
                 <Textarea
                   placeholder="Write your reply..."
-                  className="w-full"
+                  className="w-full text-sm"
                 />
                 <div className="flex justify-end gap-2">
                   <Button
                     variant="outline"
                     size="sm"
                     onClick={() => setIsReplying(false)}
+                    className="text-xs sm:text-sm"
                   >
                     Cancel
                   </Button>
-                  <Button size="sm">Submit</Button>
+                  <Button
+                    size="sm"
+                    className="text-xs sm:text-sm"
+                  >
+                    Submit
+                  </Button>
                 </div>
               </div>
             )}
