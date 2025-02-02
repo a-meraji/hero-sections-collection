@@ -1,4 +1,4 @@
-import { useState } from "react"
+export const techProductPage = `import { useState } from "react"
 import {
   Heart,
   Minus,
@@ -223,4 +223,4 @@ export const TechProductPage = () => {
       </div>
     </div>
   )
-}
+}`

@@ -1,4 +1,4 @@
-import { useState } from "react"
+export const luxuryProductPage = `import { useState } from "react"
 import { Heart, Minus, Plus, ShoppingCart } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -154,4 +154,4 @@ export const LuxuryProductPage = () => {
       </div>
     </div>
   )
-}
+}`
