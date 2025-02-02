@@ -24,12 +24,8 @@ export const SimpleInteractiveCard = () => {
           className="h-full w-full object-cover"
         />
         <Badge className="absolute left-2 top-2" variant="secondary">Trending</Badge>
-      </div>
-      <div className="p-3">
-        <h3 className="text-sm font-medium">Minimal Desk Lamp</h3>
-        <p className="mt-1 text-sm text-muted-foreground">$59</p>
         {showButtons && (
-          <div className="absolute inset-x-0 bottom-0 flex justify-end gap-2 bg-white/90 p-3">
+          <div className="absolute inset-0 flex items-center justify-center gap-2 bg-white/60 p-3 backdrop-blur-sm">
             <Button 
               size="sm"
               variant="ghost"
@@ -45,6 +41,10 @@ export const SimpleInteractiveCard = () => {
             </Button>
           </div>
         )}
+      </div>
+      <div className="p-3">
+        <h3 className="text-sm font-medium">Minimal Desk Lamp</h3>
+        <p className="mt-1 text-sm text-muted-foreground">$59</p>
       </div>
     </div>
   )

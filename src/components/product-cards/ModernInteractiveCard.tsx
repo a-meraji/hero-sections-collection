@@ -17,25 +17,15 @@ export const ModernInteractiveCard = () => {
       onBlur={() => setShowButtons(false)}
       tabIndex={0}
     >
-      <div className="aspect-square bg-gray-100">
+      <div className="relative aspect-square bg-gray-100">
         <img
           src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80"
           alt="Product"
           className="h-full w-full object-cover transition-all duration-300 group-hover:scale-105"
         />
         <Badge className="absolute right-2 top-2" variant="destructive">Sale</Badge>
-      </div>
-      <div className="p-4">
-        <div className="space-y-1">
-          <p className="text-xs text-muted-foreground">Tech Accessories</p>
-          <h3 className="font-medium">Smart Watch Pro</h3>
-          <div className="flex items-baseline gap-2">
-            <p className="text-lg font-bold">$299</p>
-            <p className="text-sm text-muted-foreground line-through">$399</p>
-          </div>
-        </div>
         {showButtons && (
-          <div className="absolute inset-x-0 bottom-0 flex gap-2 bg-white/90 p-4 backdrop-blur-sm">
+          <div className="absolute inset-0 flex items-center justify-center gap-2 bg-black/20 p-4 backdrop-blur-sm">
             <Button 
               className="flex-1" 
               variant="secondary"
@@ -52,6 +42,16 @@ export const ModernInteractiveCard = () => {
             </Button>
           </div>
         )}
+      </div>
+      <div className="p-4">
+        <div className="space-y-1">
+          <p className="text-xs text-muted-foreground">Tech Accessories</p>
+          <h3 className="font-medium">Smart Watch Pro</h3>
+          <div className="flex items-baseline gap-2">
+            <p className="text-lg font-bold">$299</p>
+            <p className="text-sm text-muted-foreground line-through">$399</p>
+          </div>
+        </div>
       </div>
     </div>
   )

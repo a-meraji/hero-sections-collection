@@ -24,16 +24,8 @@ export const InteractiveProductCard = () => {
           className="h-full w-full object-cover"
         />
         <Badge className="absolute left-3 top-3" variant="secondary">New</Badge>
-      </div>
-      <div className="p-4">
-        <p className="text-sm text-muted-foreground">Audio Brand</p>
-        <h3 className="font-semibold">Wireless Headphones</h3>
-        <div className="mt-2 flex items-center gap-2">
-          <p className="text-lg font-bold">$199</p>
-          <p className="text-sm text-muted-foreground line-through">$249</p>
-        </div>
         {showButtons && (
-          <div className="absolute inset-x-0 bottom-0 flex gap-2 bg-white/90 p-4 backdrop-blur-sm">
+          <div className="absolute inset-0 flex gap-2 items-center justify-center bg-black/40 p-4 backdrop-blur-sm">
             <Button 
               className="flex-1" 
               variant="outline"
@@ -51,6 +43,14 @@ export const InteractiveProductCard = () => {
             </Button>
           </div>
         )}
+      </div>
+      <div className="p-4">
+        <p className="text-sm text-muted-foreground">Audio Brand</p>
+        <h3 className="font-semibold">Wireless Headphones</h3>
+        <div className="mt-2 flex items-center gap-2">
+          <p className="text-lg font-bold">$199</p>
+          <p className="text-sm text-muted-foreground line-through">$249</p>
+        </div>
       </div>
     </div>
   )

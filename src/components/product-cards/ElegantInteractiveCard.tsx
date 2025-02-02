@@ -24,15 +24,8 @@ export const ElegantInteractiveCard = () => {
           className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
         />
         <Badge className="absolute left-3 top-3" variant="secondary">Limited</Badge>
-      </div>
-      <div className="p-4">
-        <p className="text-sm font-medium text-muted-foreground">Luxury Collection</p>
-        <h3 className="mt-1 font-serif text-lg">Designer Watch</h3>
-        <div className="mt-2">
-          <p className="text-lg font-bold">$899</p>
-        </div>
         {showButtons && (
-          <div className="absolute inset-x-0 bottom-0 flex flex-col gap-2 bg-white/95 p-4">
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-black/30 p-4 backdrop-blur-sm">
             <Button 
               variant="outline"
               onClick={handleButtonClick}
@@ -48,6 +41,13 @@ export const ElegantInteractiveCard = () => {
             </Button>
           </div>
         )}
+      </div>
+      <div className="p-4">
+        <p className="text-sm font-medium text-muted-foreground">Luxury Collection</p>
+        <h3 className="mt-1 font-serif text-lg">Designer Watch</h3>
+        <div className="mt-2">
+          <p className="text-lg font-bold">$899</p>
+        </div>
       </div>
     </div>
   )
