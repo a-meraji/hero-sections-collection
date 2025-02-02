@@ -467,7 +467,6 @@ export const LuxuryProductPage = () => {
     </div>
   )
 }`,
-
   "TechProductPage.tsx": `import { useState } from "react"
 import {
   Heart,
@@ -593,18 +592,18 @@ export const TechProductPage = () => {
           <div className="space-y-4">
             <h3 className="font-medium">Storage Capacity</h3>
             <div className="grid gap-3">
-              {storageOptions.map((storageOption) => (
+              {storageOptions.map((option) => (
                 <button
-                  key={storageOption.size}
-                  onClick={() => setSelectedStorage(storageOption.size)}
+                  key={option.size}
+                  onClick={() => setSelectedStorage(option.size)}
                   className={\`flex items-center justify-between rounded-lg border p-4 \${
-                    selectedStorage === storageOption.size
+                    selectedStorage === option.size
                       ? "border-primary bg-primary/5"
                       : "border-input hover:bg-accent"
                   }\`}
                 >
-                  <span className="font-medium">{storageOption.size}</span>
-                  <span>${storageOption.price}</span>
+                  <span className="font-medium">{option.size}</span>
+                  <span>${option.price}</span>
                 </button>
               ))}
             </div>
@@ -638,7 +637,7 @@ export const TechProductPage = () => {
                   $
                   {
                     storageOptions.find(
-                      (storageOption) => storageOption.size === selectedStorage
+                      (option) => option.size === selectedStorage
                     )?.price
                   }
                 </p>
