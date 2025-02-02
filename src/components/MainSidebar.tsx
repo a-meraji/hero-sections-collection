@@ -1,11 +1,9 @@
-import { Home, Image, LayoutGrid, ShoppingBag, Layout } from "lucide-react"
+import { Home, Image, LayoutGrid, ShoppingBag, Layout, MessageSquare } from "lucide-react"
 import { useLocation, Link } from "react-router-dom"
 import {
   Sidebar,
+  SidebarHeader,
   SidebarContent,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
@@ -37,6 +35,11 @@ const navigationItems = [
     url: "/product-pages",
     icon: ShoppingBag,
   },
+  {
+    title: "Reviews",
+    url: "/reviews",
+    icon: MessageSquare,
+  },
 ]
 
 export function MainSidebar() {
@@ -44,28 +47,22 @@ export function MainSidebar() {
 
   return (
     <Sidebar>
+      <SidebarHeader>
+        <h2 className="text-xl font-bold">Components</h2>
+      </SidebarHeader>
       <SidebarContent>
-        <SidebarGroup>
-          <SidebarGroupLabel>Navigation</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {navigationItems.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton
-                    asChild
-                    tooltip={item.title}
-                    data-active={location.pathname === item.url}
-                  >
-                    <Link to={item.url}>
-                      <item.icon />
-                      <span>{item.title}</span>
-                    </Link>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
+        <SidebarMenu>
+          {navigationItems.map((item) => (
+            <Link key={item.url} to={item.url}>
+              <SidebarMenuItem active={location.pathname === item.url}>
+                <SidebarMenuButton>
+                  <item.icon className="mr-2 h-4 w-4" />
+                  {item.title}
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            </Link>
+          ))}
+        </SidebarMenu>
       </SidebarContent>
     </Sidebar>
   )

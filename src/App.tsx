@@ -4,6 +4,7 @@ import Index from "@/pages/Index"
 import Carousels from "@/pages/Carousels"
 import ProductCards from "@/pages/ProductCards"
 import ProductPages from "@/pages/ProductPages"
+import Reviews from "@/pages/Reviews"
 import NotFound from "@/pages/NotFound"
 import { SidebarProvider } from "./components/ui/sidebar"
 
@@ -19,6 +20,7 @@ function App() {
               <Route path="/carousels" element={<Carousels />} />
               <Route path="/product-cards" element={<ProductCards />} />
               <Route path="/product-pages" element={<ProductPages />} />
+              <Route path="/reviews" element={<Reviews />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
