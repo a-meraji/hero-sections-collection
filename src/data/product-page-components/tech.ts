@@ -86,7 +86,7 @@ export const TechProductPage = () => {
                 onClick={() => setIsFavorite(!isFavorite)}
               >
                 <Heart
-                  className={`h-4 w-4 ${isFavorite ? "fill-primary" : ""}`}
+                  className={\`h-4 w-4 \${isFavorite ? "fill-primary" : ""}\`}
                 />
               </Button>
             </div>
@@ -128,11 +128,11 @@ export const TechProductPage = () => {
                 <button
                   key={option.size}
                   onClick={() => setSelectedStorage(option.size)}
-                  className={`flex items-center justify-between rounded-lg border p-4 ${
+                  className={\`flex items-center justify-between rounded-lg border p-4 \${
                     selectedStorage === option.size
                       ? "border-primary bg-primary/5"
                       : "border-input hover:bg-accent"
-                  }`}
+                  }\`}
                 >
                   <span className="font-medium">{option.size}</span>
                   <span>${option.price}</span>

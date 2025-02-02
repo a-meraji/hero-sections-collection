@@ -77,11 +77,11 @@ export const LuxuryProductPage = () => {
                   <button
                     key={size}
                     onClick={() => setSelectedSize(size)}
-                    className={`h-12 w-12 rounded-full border ${
+                    className={\`h-12 w-12 rounded-full border \${
                       selectedSize === size
                         ? "border-primary bg-primary text-primary-foreground"
                         : "border-input hover:bg-accent"
-                    }`}
+                    }\`}
                   >
                     {size}
                   </button>

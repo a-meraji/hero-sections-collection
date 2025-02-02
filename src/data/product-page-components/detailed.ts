@@ -1,3 +1,4 @@
+export const detailedProductPage = `
 import { useState } from "react"
 import { Heart, ShoppingCart, Check } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
@@ -30,13 +31,13 @@ export const DetailedProductPage = () => {
               <button
                 key={i}
                 onClick={() => setMainImage(i)}
-                className={`overflow-hidden ${
+                className={\`overflow-hidden \${
                   mainImage === i ? "ring-2 ring-primary" : ""
-                }`}
+                }\`}
               >
                 <img
                   src={image}
-                  alt={`Product view ${i + 1}`}
+                  alt={\`Product view \${i + 1}\`}
                   className="aspect-[3/4] object-cover"
                 />
               </button>
@@ -104,4 +105,4 @@ export const DetailedProductPage = () => {
       </div>
     </div>
   )
-}
+}`
