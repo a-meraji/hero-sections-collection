@@ -20,7 +20,7 @@ const App = () => (
         <SidebarProvider>
           <div className="flex min-h-screen w-full">
             <MainSidebar />
-            <main className="flex-1">
+            <main className="flex-1 p-4">
               <Routes>
                 <Route path="/" element={<Index />} />
                 <Route path="/carousels" element={<Carousels />} />
