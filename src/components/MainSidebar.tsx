@@ -1,4 +1,4 @@
-import { Home, Image } from "lucide-react"
+import { Home, Image, LayoutGrid, ShoppingBag, Layout } from "lucide-react"
 import { useLocation, Link } from "react-router-dom"
 import {
   Sidebar,
@@ -9,8 +9,6 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarProvider,
-  SidebarTrigger,
 } from "@/components/ui/sidebar"
 
 const navigationItems = [
@@ -20,9 +18,24 @@ const navigationItems = [
     icon: Home,
   },
   {
+    title: "Heroes",
+    url: "/heroes",
+    icon: Layout,
+  },
+  {
     title: "Carousels",
     url: "/carousels",
     icon: Image,
+  },
+  {
+    title: "Product Cards",
+    url: "/product-cards",
+    icon: LayoutGrid,
+  },
+  {
+    title: "Product Pages",
+    url: "/product-pages",
+    icon: ShoppingBag,
   },
 ]
 
