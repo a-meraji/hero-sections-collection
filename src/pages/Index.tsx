@@ -340,6 +340,19 @@ export default CosmeticsHero;`,
 export default SportswearHero;`
 };
 
+const Index = () => {
+  const [currentCategory, setCurrentCategory] = useState(0);
+
+  const handleCopyCode = (fileName: string) => {
+    const code = heroComponents[fileName];
+    if (code) {
+      navigator.clipboard.writeText(code);
+      toast.success('Code copied to clipboard!');
+    } else {
+      toast.error('Component code not found');
+    }
+  };
+
   const categories = [
     {
       name: 'Luxury Fashion',
@@ -435,3 +448,5 @@ export default SportswearHero;`
     </div>
   );
 };
+
+export default Index;
