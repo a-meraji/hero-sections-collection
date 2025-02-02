@@ -1,11 +1,12 @@
 export const productPageComponents = {
-  "MinimalProductPage.tsx": `import { useState } from "react"
+  "MinimalProductPage.tsx": `// ... keep existing code`,
+  "ModernProductPage.tsx": `import { useState } from "react"
 import { Heart, Minus, Plus, ShoppingCart } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 
-export const MinimalProductPage = () => {
+export const ModernProductPage = () => {
   const [quantity, setQuantity] = useState(1)
   const [selectedSize, setSelectedSize] = useState("M")
   const [isFavorite, setIsFavorite] = useState(false)
@@ -37,7 +38,7 @@ export const MinimalProductPage = () => {
 
         <div className="space-y-6">
           <div>
-            <h1 className="text-3xl font-medium">Minimal Product Title</h1>
+            <h1 className="text-3xl font-medium">Modern Product Title</h1>
             <p className="mt-2 text-lg text-muted-foreground">Brand Name</p>
           </div>
 
@@ -112,9 +113,7 @@ export const MinimalProductPage = () => {
             <h3 className="font-medium">Description</h3>
             <p className="text-muted-foreground">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat.
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
         </div>
@@ -122,8 +121,7 @@ export const MinimalProductPage = () => {
     </div>
   )
 }`,
-  "ModernProductPage.tsx": `// ... keep existing code`,
   "LuxuryProductPage.tsx": `// ... keep existing code`,
   "TechProductPage.tsx": `// ... keep existing code`,
-  "DetailedProductPage.tsx": `// ... keep existing code`,
+  "DetailedProductPage.tsx": `// ... keep existing code`
 }
