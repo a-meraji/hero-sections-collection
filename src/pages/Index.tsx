@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { toast } from "sonner";
+import { ClipboardCopy } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import LuxuryFashionHero from '@/components/heroes/LuxuryFashionHero';
 import LuxuryFashionHero2 from '@/components/heroes/LuxuryFashionHero2';
 import LuxuryFashionHero3 from '@/components/heroes/LuxuryFashionHero3';
@@ -18,8 +20,6 @@ import CosmeticsHero3 from '@/components/heroes/CosmeticsHero3';
 import SportswearHero from '@/components/heroes/SportswearHero';
 import SportswearHero2 from '@/components/heroes/SportswearHero2';
 import SportswearHero3 from '@/components/heroes/SportswearHero3';
-import { Button } from '@/components/ui/button';
-import { ClipboardCopy } from 'lucide-react';
 
 const Index = () => {
   const [currentCategory, setCurrentCategory] = useState(0);
@@ -27,12 +27,14 @@ const Index = () => {
   const handleCopyCode = async (componentPath: string) => {
     try {
       const response = await fetch(`/src/components/heroes/${componentPath}`);
+      if (!response.ok) throw new Error('Failed to fetch component code');
+      
       const code = await response.text();
       await navigator.clipboard.writeText(code);
-      toast.success("Code copied to clipboard!");
+      toast.success("Component code copied to clipboard!");
     } catch (error) {
       console.error('Failed to copy code:', error);
-      toast.error("Failed to copy code");
+      toast.error("Failed to copy component code");
     }
   };
 
