@@ -16,87 +16,121 @@ import { SimpleInteractiveCard } from "@/components/product-cards/SimpleInteract
 import { GradientProductCard } from "@/components/product-cards/GradientProductCard"
 import { BorderlessProductCard } from "@/components/product-cards/BorderlessProductCard"
 import { GlassProductCard } from "@/components/product-cards/GlassProductCard"
+import { HeroShowcase } from "@/components/HeroShowcase"
+import { toast } from "sonner"
 
 const ProductCards = () => {
+  const handleCopyCode = async (fileName: string) => {
+    try {
+      const response = await fetch(`/src/components/product-cards/${fileName}`);
+      const code = await response.text();
+      await navigator.clipboard.writeText(code);
+      toast.success("Code copied to clipboard!");
+    } catch (error) {
+      toast.error("Failed to copy code");
+      console.error("Error copying code:", error);
+    }
+  };
+
+  const components = [
+    {
+      component: <MinimalProductCard />,
+      name: "Minimal Product Card",
+      file: "MinimalProductCard.tsx",
+    },
+    {
+      component: <ModernProductCard />,
+      name: "Modern Product Card",
+      file: "ModernProductCard.tsx",
+    },
+    {
+      component: <LuxuryProductCard />,
+      name: "Luxury Product Card",
+      file: "LuxuryProductCard.tsx",
+    },
+    {
+      component: <CompactProductCard />,
+      name: "Compact Product Card",
+      file: "CompactProductCard.tsx",
+    },
+    {
+      component: <DetailedProductCard />,
+      name: "Detailed Product Card",
+      file: "DetailedProductCard.tsx",
+    },
+    {
+      component: <GalleryProductCard />,
+      name: "Gallery Product Card",
+      file: "GalleryProductCard.tsx",
+    },
+    {
+      component: <HoverEffectProductCard />,
+      name: "Hover Effect Product Card",
+      file: "HoverEffectProductCard.tsx",
+    },
+    {
+      component: <VariantsProductCard />,
+      name: "Variants Product Card",
+      file: "VariantsProductCard.tsx",
+    },
+    {
+      component: <SimpleProductCard />,
+      name: "Simple Product Card",
+      file: "SimpleProductCard.tsx",
+    },
+    {
+      component: <FeaturedProductCard />,
+      name: "Featured Product Card",
+      file: "FeaturedProductCard.tsx",
+    },
+    {
+      component: <InteractiveProductCard />,
+      name: "Interactive Product Card",
+      file: "InteractiveProductCard.tsx",
+    },
+    {
+      component: <MinimalistInteractiveCard />,
+      name: "Minimalist Interactive Card",
+      file: "MinimalistInteractiveCard.tsx",
+    },
+    {
+      component: <ElegantInteractiveCard />,
+      name: "Elegant Interactive Card",
+      file: "ElegantInteractiveCard.tsx",
+    },
+    {
+      component: <ModernInteractiveCard />,
+      name: "Modern Interactive Card",
+      file: "ModernInteractiveCard.tsx",
+    },
+    {
+      component: <SimpleInteractiveCard />,
+      name: "Simple Interactive Card",
+      file: "SimpleInteractiveCard.tsx",
+    },
+    {
+      component: <GradientProductCard />,
+      name: "Gradient Product Card",
+      file: "GradientProductCard.tsx",
+    },
+    {
+      component: <BorderlessProductCard />,
+      name: "Borderless Product Card",
+      file: "BorderlessProductCard.tsx",
+    },
+    {
+      component: <GlassProductCard />,
+      name: "Glass Product Card",
+      file: "GlassProductCard.tsx",
+    },
+  ];
+
   return (
     <div className="container py-8">
       <h1 className="mb-8 text-3xl font-bold">Product Card Examples</h1>
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        <div>
-          <h2 className="mb-4 text-lg font-semibold">Minimal Style</h2>
-          <MinimalProductCard />
-        </div>
-        <div>
-          <h2 className="mb-4 text-lg font-semibold">Modern Style</h2>
-          <ModernProductCard />
-        </div>
-        <div>
-          <h2 className="mb-4 text-lg font-semibold">Luxury Style</h2>
-          <LuxuryProductCard />
-        </div>
-        <div>
-          <h2 className="mb-4 text-lg font-semibold">Compact Style</h2>
-          <CompactProductCard />
-        </div>
-        <div>
-          <h2 className="mb-4 text-lg font-semibold">Detailed Style</h2>
-          <DetailedProductCard />
-        </div>
-        <div>
-          <h2 className="mb-4 text-lg font-semibold">Gallery Style</h2>
-          <GalleryProductCard />
-        </div>
-        <div>
-          <h2 className="mb-4 text-lg font-semibold">Hover Effect Style</h2>
-          <HoverEffectProductCard />
-        </div>
-        <div>
-          <h2 className="mb-4 text-lg font-semibold">Variants Style</h2>
-          <VariantsProductCard />
-        </div>
-        <div>
-          <h2 className="mb-4 text-lg font-semibold">Simple Style</h2>
-          <SimpleProductCard />
-        </div>
-        <div>
-          <h2 className="mb-4 text-lg font-semibold">Featured Style</h2>
-          <FeaturedProductCard />
-        </div>
-        <div>
-          <h2 className="mb-4 text-lg font-semibold">Interactive Style</h2>
-          <InteractiveProductCard />
-        </div>
-        <div>
-          <h2 className="mb-4 text-lg font-semibold">Minimalist Interactive</h2>
-          <MinimalistInteractiveCard />
-        </div>
-        <div>
-          <h2 className="mb-4 text-lg font-semibold">Elegant Interactive</h2>
-          <ElegantInteractiveCard />
-        </div>
-        <div>
-          <h2 className="mb-4 text-lg font-semibold">Modern Interactive</h2>
-          <ModernInteractiveCard />
-        </div>
-        <div>
-          <h2 className="mb-4 text-lg font-semibold">Simple Interactive</h2>
-          <SimpleInteractiveCard />
-        </div>
-        <div>
-          <h2 className="mb-4 text-lg font-semibold">Gradient Style</h2>
-          <GradientProductCard />
-        </div>
-        <div>
-          <h2 className="mb-4 text-lg font-semibold">Borderless Style</h2>
-          <BorderlessProductCard />
-        </div>
-        <div>
-          <h2 className="mb-4 text-lg font-semibold">Glass Style</h2>
-          <GlassProductCard />
-        </div>
-      </div>
+      <HeroShowcase components={components} onCopyCode={handleCopyCode} />
     </div>
-  )
-}
+  );
+};
 
-export default ProductCards
+export default ProductCards;
