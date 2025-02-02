@@ -1,10 +1,9 @@
+import { CodeExampleBlock } from "@/components/carousels/CodeExampleBlock"
 import { DetailedProductPage } from "@/components/product-pages/DetailedProductPage"
 import { LuxuryProductPage } from "@/components/product-pages/LuxuryProductPage"
 import { MinimalProductPage } from "@/components/product-pages/MinimalProductPage"
 import { ModernProductPage } from "@/components/product-pages/ModernProductPage"
 import { TechProductPage } from "@/components/product-pages/TechProductPage"
-import { CodeExampleBlock } from "@/components/carousels/CodeExampleBlock"
-import { productPageComponents } from "@/data/productPageComponents"
 
 export default function ProductPages() {
   return (
@@ -20,8 +19,10 @@ export default function ProductPages() {
             title="Minimal Product Page"
             description="A clean and minimal product page layout focusing on essential information."
             component={<MinimalProductPage />}
-            code={productPageComponents["MinimalProductPage.tsx"]}
-          />
+            code={`// Minimal Product Page Code`}
+          >
+            <MinimalProductPage />
+          </CodeExampleBlock>
         </section>
 
         <section>
@@ -29,8 +30,10 @@ export default function ProductPages() {
             title="Modern Product Page"
             description="A modern product page with advanced features and interactive elements."
             component={<ModernProductPage />}
-            code={productPageComponents["ModernProductPage.tsx"]}
-          />
+            code={`// Modern Product Page Code`}
+          >
+            <ModernProductPage />
+          </CodeExampleBlock>
         </section>
 
         <section>
@@ -38,8 +41,10 @@ export default function ProductPages() {
             title="Luxury Product Page"
             description="An elegant product page design for luxury items."
             component={<LuxuryProductPage />}
-            code={productPageComponents["LuxuryProductPage.tsx"]}
-          />
+            code={`// Luxury Product Page Code`}
+          >
+            <LuxuryProductPage />
+          </CodeExampleBlock>
         </section>
 
         <section>
@@ -47,8 +52,10 @@ export default function ProductPages() {
             title="Tech Product Page"
             description="A feature-rich product page for tech products with detailed specifications."
             component={<TechProductPage />}
-            code={productPageComponents["TechProductPage.tsx"]}
-          />
+            code={`// Tech Product Page Code`}
+          >
+            <TechProductPage />
+          </CodeExampleBlock>
         </section>
 
         <section>
@@ -56,8 +63,10 @@ export default function ProductPages() {
             title="Detailed Product Page"
             description="A comprehensive product page with structured information and multiple sections."
             component={<DetailedProductPage />}
-            code={productPageComponents["DetailedProductPage.tsx"]}
-          />
+            code={`// Detailed Product Page Code`}
+          >
+            <DetailedProductPage />
+          </CodeExampleBlock>
         </section>
       </div>
     </div>

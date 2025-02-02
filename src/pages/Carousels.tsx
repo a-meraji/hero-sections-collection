@@ -15,6 +15,7 @@ const Carousels = () => {
     <div className="container py-10 space-y-20">
       <CodeExampleBlock
         title="Basic Carousel"
+        component={<BasicCarousel />}
         code={`<Carousel>
   <CarouselContent>
     {items.map((item) => (
@@ -38,6 +39,7 @@ const Carousels = () => {
 
       <CodeExampleBlock
         title="Full Width Image Carousel"
+        component={<FullWidthCarousel />}
         code={`<Carousel className="w-full">
   <CarouselContent>
     {images.map((image) => (
@@ -55,6 +57,7 @@ const Carousels = () => {
 
       <CodeExampleBlock
         title="Multiple Items Carousel"
+        component={<MultipleItemsCarousel />}
         code={`<Carousel
   opts={{
     align: "start",
@@ -84,6 +87,7 @@ const Carousels = () => {
 
       <CodeExampleBlock
         title="Product Showcase Carousel"
+        component={<ProductCarousel />}
         code={`<Carousel
   opts={{
     align: "start",
@@ -114,6 +118,7 @@ const Carousels = () => {
 
       <CodeExampleBlock
         title="Testimonial Carousel"
+        component={<TestimonialCarousel />}
         code={`<Carousel
   opts={{
     align: "center",
@@ -143,6 +148,7 @@ const Carousels = () => {
 
       <CodeExampleBlock
         title="Image Gallery Carousel"
+        component={<ImageGalleryCarousel />}
         code={`<Carousel className="w-full" onSelect={(index) => setCurrentIndex(index)}>
   <CarouselContent>
     {images.map((image) => (
@@ -166,6 +172,7 @@ const Carousels = () => {
 
       <CodeExampleBlock
         title="Card Carousel"
+        component={<CardCarousel />}
         code={`<Carousel
   opts={{
     align: "center",
@@ -200,6 +207,7 @@ const Carousels = () => {
 
       <CodeExampleBlock
         title="Vertical Carousel"
+        component={<VerticalCarousel />}
         code={`<Carousel
   opts={{
     align: "start",
@@ -225,6 +233,7 @@ const Carousels = () => {
 
       <CodeExampleBlock
         title="Timeline Carousel"
+        component={<TimelineCarousel />}
         code={`<Carousel className="w-full max-w-4xl mx-auto">
   <CarouselContent>
     {timelineEvents.map((event) => (
@@ -250,6 +259,7 @@ const Carousels = () => {
 
       <CodeExampleBlock
         title="Featured Carousel"
+        component={<FeaturedCarousel />}
         code={`<Carousel className="w-full">
   <CarouselContent>
     {featuredItems.map((item) => (
