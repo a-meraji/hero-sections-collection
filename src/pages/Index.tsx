@@ -200,26 +200,145 @@ export default TechStoreHero;`,
 
 export default FurnitureStoreHero;`,
 
-  // ... Add more components in the same format
+  'JewelryStoreHero.tsx': `const JewelryStoreHero = () => {
+  return (
+    <div className="relative h-screen w-full overflow-hidden bg-black">
+      <div
+        className="absolute inset-0 opacity-50"
+        style={{
+          backgroundImage: 'url(https://images.unsplash.com/photo-1515562141207-7a88fb7ce338)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      />
+      
+      <div className="relative flex h-full items-center justify-center px-4">
+        <div className="text-center text-white">
+          <h2 className="mb-2 text-xl font-light uppercase tracking-widest">Timeless Elegance</h2>
+          <h1 className="mb-6 text-5xl md:text-7xl font-bold">Luxury Jewelry</h1>
+          <p className="mb-8 text-lg md:text-xl font-light">Discover our exclusive collection of handcrafted pieces</p>
+          <button className="border-2 border-white px-8 py-3 text-lg transition-colors hover:bg-white hover:text-black">
+            View Collection
+          </button>
+        </div>
+      </div>
+      
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-16 text-white">
+        <div className="text-center">
+          <p className="text-3xl font-light">500+</p>
+          <p className="text-sm uppercase tracking-wider">Unique Designs</p>
+        </div>
+        <div className="text-center">
+          <p className="text-3xl font-light">50+</p>
+          <p className="text-sm uppercase tracking-wider">Years of Excellence</p>
+        </div>
+        <div className="text-center">
+          <p className="text-3xl font-light">100%</p>
+          <p className="text-sm uppercase tracking-wider">Certified</p>
+        </div>
+      </div>
+    </div>
+  );
 };
 
-const Index = () => {
-  const [currentCategory, setCurrentCategory] = useState(0);
+export default JewelryStoreHero;`,
 
-  const handleCopyCode = async (componentPath: string) => {
-    try {
-      const componentCode = heroComponents[componentPath];
-      if (!componentCode) {
-        throw new Error('Component code not found');
-      }
+  'CosmeticsHero.tsx': `const CosmeticsHero = () => {
+  return (
+    <div className="relative h-screen w-full overflow-hidden bg-[#FDF6F0]">
+      <div className="absolute inset-0 bg-gradient-to-r from-[#FDF6F0] via-transparent to-transparent" />
+      
+      <div className="absolute right-0 top-0 h-full w-2/3">
+        <div
+          className="h-full w-full"
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1596462502278-27bfdc403348)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        />
+      </div>
+      
+      <div className="relative flex h-full items-center px-8 md:px-16">
+        <div className="max-w-xl">
+          <h2 className="mb-4 text-lg font-medium text-rose-500">New Collection</h2>
+          <h1 className="mb-6 text-5xl md:text-7xl font-bold text-gray-900">Natural Beauty Enhanced</h1>
+          <p className="mb-8 text-lg text-gray-600">
+            Discover our range of organic and cruelty-free cosmetics, designed to enhance your natural beauty
+          </p>
+          <button className="rounded-full bg-rose-500 px-8 py-3 text-lg font-medium text-white transition-colors hover:bg-rose-600">
+            Shop Now
+          </button>
+          
+          <div className="mt-12 flex gap-8">
+            <div>
+              <p className="text-3xl font-bold text-gray-900">100%</p>
+              <p className="text-sm text-gray-600">Natural Ingredients</p>
+            </div>
+            <div>
+              <p className="text-3xl font-bold text-gray-900">Cruelty</p>
+              <p className="text-sm text-gray-600">Free Products</p>
+            </div>
+            <div>
+              <p className="text-3xl font-bold text-gray-900">ECO</p>
+              <p className="text-sm text-gray-600">Friendly Packaging</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-      await navigator.clipboard.writeText(componentCode);
-      toast.success("Ready-to-use component code copied to clipboard!");
-    } catch (error) {
-      console.error('Failed to copy code:', error);
-      toast.error("Failed to copy component code");
-    }
-  };
+export default CosmeticsHero;`,
+
+  'SportswearHero.tsx': `const SportswearHero = () => {
+  return (
+    <div className="relative h-screen w-full overflow-hidden bg-gray-900">
+      <video
+        className="absolute inset-0 h-full w-full object-cover opacity-50"
+        autoPlay
+        loop
+        muted
+        playsInline
+      >
+        <source
+          src="https://player.vimeo.com/external/434045526.sd.mp4?s=ef41091b5d5851c37891f96127f42299081f48aa&profile_id=164&oauth2_token_id=57447761"
+          type="video/mp4"
+        />
+      </video>
+      
+      <div className="relative flex h-full items-center justify-center px-4">
+        <div className="text-center text-white">
+          <h2 className="mb-2 text-xl font-bold uppercase tracking-widest text-yellow-400">New Collection</h2>
+          <h1 className="mb-6 text-5xl md:text-7xl font-black uppercase">Push Your Limits</h1>
+          <p className="mb-8 text-lg md:text-xl">Performance wear for the ultimate athlete</p>
+          <button className="rounded-full bg-yellow-400 px-8 py-3 text-lg font-bold text-gray-900 transition-colors hover:bg-yellow-300">
+            Shop Collection
+          </button>
+          
+          <div className="mt-12 flex justify-center gap-16">
+            <div>
+              <p className="text-3xl font-bold">Pro</p>
+              <p className="text-sm uppercase">Athletes Choice</p>
+            </div>
+            <div>
+              <p className="text-3xl font-bold">100%</p>
+              <p className="text-sm uppercase">Performance</p>
+            </div>
+            <div>
+              <p className="text-3xl font-bold">24/7</p>
+              <p className="text-sm uppercase">Support</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default SportswearHero;`
+};
 
   const categories = [
     {
@@ -316,5 +435,3 @@ const Index = () => {
     </div>
   );
 };
-
-export default Index;
