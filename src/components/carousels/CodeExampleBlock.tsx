@@ -34,7 +34,6 @@ export const CodeExampleBlock = ({ title, description, code, component, children
         <code>{code}</code>
       </pre>
       {component}
-      {children}
     </section>
   )
 }
