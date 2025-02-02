@@ -1,25 +1,29 @@
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 const JewelryStoreHero3 = () => {
   return (
-    <div className="relative min-h-[80vh] bg-gradient-to-r from-amber-50 to-rose-50">
-      <div className="container mx-auto px-4 py-24 text-center">
-        <div className="max-w-3xl mx-auto">
-          <span className="text-amber-700 font-medium mb-4 block">New Collection</span>
-          <h1 className="text-6xl font-serif mb-6">
-            Artisanal Jewelry
-            <span className="block text-amber-800">Handcrafted with Love</span>
+    <div className="relative min-h-[80vh] bg-[#2a2a2a] overflow-hidden">
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f')] bg-cover bg-center opacity-20" />
+      <div className="relative container mx-auto px-4 py-24 flex items-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="max-w-2xl text-white"
+        >
+          <h1 className="text-6xl font-serif tracking-tight mb-6">
+            Artisan Collection
+            <span className="block font-light">Handcrafted Beauty</span>
           </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Each piece tells a story of elegance and sophistication.
+          <p className="text-lg text-gray-300 mb-8">
+            Each piece tells a unique story, crafted with passion and precision by our master artisans.
           </p>
           <div className="space-x-4">
-            <Button className="bg-amber-900 hover:bg-amber-800">Shop Collection</Button>
-            <Button variant="outline" className="border-amber-900 text-amber-900">
-              Learn More
-            </Button>
+            <Button className="bg-amber-500 text-black hover:bg-amber-400">Explore Now</Button>
+            <Button variant="outline" className="border-amber-500 text-amber-500 hover:bg-amber-950/50">Custom Orders</Button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

@@ -1,25 +1,29 @@
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 const CosmeticsHero3 = () => {
   return (
-    <div className="relative min-h-[80vh] bg-gradient-to-r from-rose-50 to-pink-50">
-      <div className="container mx-auto px-4 py-24 text-center">
-        <div className="max-w-3xl mx-auto">
-          <span className="text-rose-600 font-medium mb-4 block">Clean Beauty</span>
-          <h1 className="text-6xl font-serif mb-6">
-            Natural Skincare
-            <span className="block text-rose-700">For Every Skin Type</span>
+    <div className="relative min-h-[80vh] bg-purple-900 overflow-hidden">
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1612817288484-6f916006741a')] bg-cover bg-center opacity-30" />
+      <div className="relative container mx-auto px-4 py-24 flex items-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="max-w-2xl text-white"
+        >
+          <h1 className="text-6xl font-serif tracking-tight mb-6">
+            Luxury Skincare
+            <span className="block font-light">For Your Beauty</span>
           </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Discover the power of natural ingredients for your daily skincare routine.
+          <p className="text-lg text-purple-200 mb-8">
+            Experience the transformative power of premium skincare products designed for your unique beauty.
           </p>
           <div className="space-x-4">
-            <Button className="bg-rose-700 hover:bg-rose-800">View Products</Button>
-            <Button variant="outline" className="border-rose-700 text-rose-700">
-              Learn More
-            </Button>
+            <Button className="bg-purple-500 text-white hover:bg-purple-600">Explore Collection</Button>
+            <Button variant="outline" className="border-purple-300 text-purple-300 hover:bg-purple-800/50">Book Consultation</Button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
