@@ -23,9 +23,13 @@ const images = [
 export const ImageGalleryCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
+  const handleSelect = (index: number) => {
+    setCurrentIndex(index)
+  }
+
   return (
     <div className="space-y-4">
-      <Carousel className="w-full" onSelect={(index) => setCurrentIndex(index)}>
+      <Carousel className="w-full" onSelect={handleSelect}>
         <CarouselContent>
           {images.map((image, index) => (
             <CarouselItem key={index}>
