@@ -22,9 +22,9 @@ export const GridProductPage = () => {
   ]
 
   return (
-    <div className="mx-auto max-w-6xl px-4">
+    <div className="mx-auto w-full max-w-6xl px-4 py-4 sm:px-6 lg:px-8">
       <div className="grid gap-8 lg:grid-cols-2">
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           {Array.from({ length: 4 }).map((_, i) => (
             <div key={i} className="aspect-square bg-gray-100">
               <img
@@ -36,16 +36,16 @@ export const GridProductPage = () => {
           ))}
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8">
           <div>
-            <h1 className="text-3xl font-bold">Premium Sneakers</h1>
+            <h1 className="text-2xl font-bold sm:text-3xl">Premium Sneakers</h1>
             <p className="mt-2 text-lg text-muted-foreground">
               Signature Collection
             </p>
           </div>
 
           <div className="space-y-1">
-            <p className="text-3xl font-bold">$199.00</p>
+            <p className="text-2xl font-bold sm:text-3xl">$199.00</p>
             <p className="text-sm text-muted-foreground">
               Or 4 interest-free payments of $49.75
             </p>
@@ -55,7 +55,7 @@ export const GridProductPage = () => {
 
           <div>
             <h3 className="font-medium">Color</h3>
-            <div className="mt-4 flex gap-3">
+            <div className="mt-4 flex flex-wrap gap-3">
               {colors.map((color) => (
                 <button
                   key={color.value}
@@ -78,7 +78,7 @@ export const GridProductPage = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {features.map((feature, i) => (
               <div
                 key={i}

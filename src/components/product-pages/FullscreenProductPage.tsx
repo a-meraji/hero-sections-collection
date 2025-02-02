@@ -8,7 +8,7 @@ export const FullscreenProductPage = () => {
   return (
     <div className="min-h-screen">
       <div className="grid min-h-screen md:grid-cols-2">
-        <div className="relative">
+        <div className="relative min-h-[50vh] md:min-h-screen">
           <img
             src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=800&q=80"
             alt="Product"
@@ -17,18 +17,18 @@ export const FullscreenProductPage = () => {
           <div className="absolute inset-0 bg-black/20" />
         </div>
 
-        <div className="relative flex items-center bg-black p-8 text-white">
-          <div className="mx-auto max-w-xl space-y-8">
+        <div className="relative flex items-center bg-black p-4 text-white sm:p-6 md:p-8">
+          <div className="mx-auto max-w-xl space-y-6 sm:space-y-8">
             <div>
-              <h1 className="text-5xl font-bold">Limited Edition</h1>
-              <p className="mt-4 text-lg text-gray-400">
+              <h1 className="text-3xl font-bold sm:text-4xl md:text-5xl">Limited Edition</h1>
+              <p className="mt-4 text-base text-gray-400 sm:text-lg">
                 Experience the future of footwear with our latest innovation in
                 comfort and style.
               </p>
             </div>
 
             <div className="space-y-2">
-              <p className="text-4xl font-light">$299.00</p>
+              <p className="text-3xl font-light sm:text-4xl">$299.00</p>
               <p className="text-sm text-gray-400">
                 Limited time offer - Free shipping worldwide
               </p>
@@ -64,7 +64,7 @@ export const FullscreenProductPage = () => {
               </Button>
             </div>
 
-            <div className="grid grid-cols-2 gap-8 border-t border-white/20 pt-8">
+            <div className="grid gap-6 border-t border-white/20 pt-6 sm:grid-cols-2 sm:gap-8 sm:pt-8">
               <div>
                 <h3 className="font-medium">Materials</h3>
                 <p className="mt-2 text-sm text-gray-400">

@@ -7,7 +7,7 @@ export const CompactProductPage = () => {
   const [isFavorite, setIsFavorite] = useState(false)
 
   return (
-    <div className="mx-auto max-w-3xl px-4">
+    <div className="mx-auto w-full max-w-3xl px-4 py-4 sm:px-6 lg:px-8">
       <div className="overflow-hidden rounded-xl border border-border bg-card">
         <div className="aspect-[4/3] bg-muted">
           <img
@@ -17,11 +17,11 @@ export const CompactProductPage = () => {
           />
         </div>
 
-        <div className="space-y-6 p-6">
+        <div className="space-y-4 p-4 sm:space-y-6 sm:p-6">
           <div>
             <div className="flex items-start justify-between">
               <div>
-                <h1 className="text-2xl font-bold">Wireless Headphones</h1>
+                <h1 className="text-xl font-bold sm:text-2xl">Wireless Headphones</h1>
                 <p className="mt-1 text-sm text-muted-foreground">
                   Premium Audio Series
                 </p>
@@ -49,7 +49,7 @@ export const CompactProductPage = () => {
 
           <div className="space-y-2">
             <div className="flex items-baseline justify-between">
-              <p className="text-2xl font-bold">$299.00</p>
+              <p className="text-xl font-bold sm:text-2xl">$299.00</p>
               <p className="text-sm text-muted-foreground">In Stock</p>
             </div>
             <Button className="w-full">

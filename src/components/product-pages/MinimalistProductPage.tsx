@@ -8,8 +8,8 @@ export const MinimalistProductPage = () => {
   const [isFavorite, setIsFavorite] = useState(false)
 
   return (
-    <div className="mx-auto max-w-5xl px-4">
-      <div className="grid gap-16 md:grid-cols-2">
+    <div className="mx-auto w-full max-w-5xl px-4 py-4 sm:px-6 lg:px-8">
+      <div className="grid gap-8 md:gap-16 lg:grid-cols-2">
         <div className="aspect-square bg-gray-100">
           <img
             src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80"
@@ -18,13 +18,13 @@ export const MinimalistProductPage = () => {
           />
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8">
           <div>
-            <h1 className="text-4xl font-light">Minimalist Watch</h1>
+            <h1 className="text-3xl font-light sm:text-4xl">Minimalist Watch</h1>
             <p className="mt-2 text-sm text-muted-foreground">Series One</p>
           </div>
 
-          <p className="text-3xl">$299.00</p>
+          <p className="text-2xl sm:text-3xl">$299.00</p>
 
           <Separator />
 

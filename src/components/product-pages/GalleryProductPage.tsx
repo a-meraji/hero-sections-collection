@@ -15,7 +15,7 @@ export const GalleryProductPage = () => {
   ]
 
   return (
-    <div className="mx-auto max-w-7xl px-4">
+    <div className="mx-auto w-full max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
       <div className="grid gap-8 lg:grid-cols-12">
         <div className="space-y-4 lg:col-span-7">
           <div className="aspect-square overflow-hidden rounded-xl bg-gray-100">
@@ -60,14 +60,14 @@ export const GalleryProductPage = () => {
                   (128 reviews)
                 </span>
               </div>
-              <h1 className="mt-2 text-3xl font-bold">Sport Sneakers</h1>
+              <h1 className="mt-2 text-2xl font-bold sm:text-3xl">Sport Sneakers</h1>
               <p className="mt-1 text-lg text-muted-foreground">
                 Limited Edition
               </p>
             </div>
 
             <div className="space-y-1">
-              <p className="text-3xl font-bold">$129.00</p>
+              <p className="text-2xl font-bold sm:text-3xl">$129.00</p>
               <p className="text-sm text-muted-foreground">
                 Free shipping on orders over $50
               </p>
