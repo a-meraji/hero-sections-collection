@@ -22,6 +22,24 @@ const products = [
     price: "۹۶,۰۰۰",
     discount: "30%",
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+  },
+  {
+    title: "شامپو مو حجم دهنده",
+    price: "۱۵۸,۰۰۰",
+    discount: "15%",
+    image: "https://images.unsplash.com/photo-1556227702-d1e4e7b5c232"
+  },
+  {
+    title: "روغن آشپزی طبیعی",
+    price: "۱۲۵,۰۰۰",
+    discount: "20%",
+    image: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5"
+  },
+  {
+    title: "دستمال کاغذی نرم",
+    price: "۸۵,۰۰۰",
+    discount: "35%",
+    image: "https://images.unsplash.com/photo-1597484661643-2f5fef640dd1"
   }
 ]
 
