@@ -26,10 +26,10 @@ const timelineEvents = [
 
 export const TimelineCarousel = () => {
   return (
-    <Carousel className="w-full max-w-4xl mx-auto">
+    <Carousel className="w-full max-w-4xl mx-auto px-4 md:px-0">
       <CarouselContent>
         {timelineEvents.map((event, index) => (
-          <CarouselItem key={index}>
+          <CarouselItem key={index} className="basis-full">
             <Card>
               <CardContent className="flex flex-col items-center p-6">
                 <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center mb-4">
@@ -42,8 +42,8 @@ export const TimelineCarousel = () => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious className="hidden md:flex" />
+      <CarouselNext className="hidden md:flex" />
     </Carousel>
   )
 }

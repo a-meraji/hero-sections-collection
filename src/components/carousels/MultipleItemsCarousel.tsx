@@ -11,7 +11,7 @@ export const MultipleItemsCarousel = () => {
     >
       <CarouselContent className="-ml-1">
         {Array.from({ length: 10 }).map((_, index) => (
-          <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
+          <CarouselItem key={index} className="pl-1 basis-full sm:basis-1/2 lg:basis-1/3">
             <div className="p-1">
               <div className="flex aspect-square items-center justify-center rounded-xl bg-secondary">
                 <span className="text-3xl font-semibold">{index + 1}</span>
@@ -20,8 +20,8 @@ export const MultipleItemsCarousel = () => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious className="hidden md:flex" />
+      <CarouselNext className="hidden md:flex" />
     </Carousel>
   )
 }

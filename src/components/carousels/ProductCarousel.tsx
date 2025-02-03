@@ -11,7 +11,7 @@ export const ProductCarousel = () => {
     >
       <CarouselContent>
         {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+          <CarouselItem key={index} className="basis-full sm:basis-1/2 lg:basis-1/3">
             <div className="p-1">
               <Card>
                 <div className="rounded-xl overflow-hidden">
@@ -26,8 +26,8 @@ export const ProductCarousel = () => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious className="hidden md:flex" />
+      <CarouselNext className="hidden md:flex" />
     </Carousel>
   )
 }

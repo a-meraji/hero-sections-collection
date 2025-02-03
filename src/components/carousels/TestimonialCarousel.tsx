@@ -25,11 +25,11 @@ export const TestimonialCarousel = () => {
       opts={{
         align: "center",
       }}
-      className="w-full max-w-xl mx-auto"
+      className="w-full max-w-xl mx-auto px-4 md:px-0"
     >
       <CarouselContent>
         {testimonials.map((testimonial, index) => (
-          <CarouselItem key={index}>
+          <CarouselItem key={index} className="basis-full">
             <Card>
               <div className="p-6 text-center">
                 <blockquote className="text-lg italic mb-4">{testimonial.quote}</blockquote>
@@ -42,8 +42,8 @@ export const TestimonialCarousel = () => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious className="hidden md:flex" />
+      <CarouselNext className="hidden md:flex" />
     </Carousel>
   )
 }

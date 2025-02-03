@@ -30,7 +30,7 @@ export const CardCarousel = () => {
     >
       <CarouselContent>
         {cards.map((card, index) => (
-          <CarouselItem key={index}>
+          <CarouselItem key={index} className="basis-full md:basis-auto">
             <Card className="border-2">
               <CardHeader>
                 <CardTitle>{card.title}</CardTitle>
@@ -53,8 +53,8 @@ export const CardCarousel = () => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious className="hidden md:flex" />
+      <CarouselNext className="hidden md:flex" />
     </Carousel>
   )
 }
