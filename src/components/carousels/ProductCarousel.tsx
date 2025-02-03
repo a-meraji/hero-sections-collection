@@ -15,7 +15,7 @@ export const ProductCarousel = () => {
             <div className="p-1">
               <Card>
                 <div className="rounded-xl overflow-hidden">
-                  <div className="bg-secondary aspect-[4/3]" />
+                  <div className="bg-secondary aspect-square sm:aspect-[4/3]" />
                   <div className="p-4">
                     <h3 className="font-semibold">Product {index + 1}</h3>
                     <p className="text-sm text-muted-foreground">${(99.99 * (index + 1)).toFixed(2)}</p>

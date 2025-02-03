@@ -39,19 +39,19 @@ export const ImageGalleryCarousel = () => {
       >
         <CarouselContent>
           {images.map((image, index) => (
-            <CarouselItem key={index}>
+            <CarouselItem key={index} className="basis-full">
               <Card className="overflow-hidden">
                 <img 
                   src={image.url}
                   alt={image.title}
-                  className="w-full h-[400px] object-cover"
+                  className="w-full h-56 sm:h-[400px] object-cover"
                 />
               </Card>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="hidden md:flex" />
+        <CarouselNext className="hidden md:flex" />
       </Carousel>
       <div className="text-center">
         <h3 className="text-xl font-semibold">{images[currentIndex].title}</h3>

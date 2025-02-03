@@ -28,13 +28,13 @@ export const FeaturedCarousel = () => {
     <Carousel className="w-full">
       <CarouselContent>
         {featuredItems.map((item, index) => (
-          <CarouselItem key={index}>
+          <CarouselItem key={index} className="basis-full">
             <Card className="overflow-hidden">
               <div className="relative">
                 <img 
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-[300px] object-cover"
+                  className="w-full h-48 sm:h-[300px] object-cover"
                 />
                 <div className="absolute top-4 left-4">
                   <Badge variant="secondary">{item.badge}</Badge>
@@ -48,8 +48,8 @@ export const FeaturedCarousel = () => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious className="hidden md:flex" />
+      <CarouselNext className="hidden md:flex" />
     </Carousel>
   )
 }
