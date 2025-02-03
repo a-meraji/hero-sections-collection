@@ -9,10 +9,19 @@ import { CardCarousel } from "@/components/carousels/CardCarousel"
 import { VerticalCarousel } from "@/components/carousels/VerticalCarousel"
 import { TimelineCarousel } from "@/components/carousels/TimelineCarousel"
 import { FeaturedCarousel } from "@/components/carousels/FeaturedCarousel"
+import { RTLProductCarousel } from "@/components/carousels/RTLProductCarousel"
 
 const Carousels = () => {
   return (
     <div className="container py-10 space-y-20">
+      <CodeExampleBlock
+        title="RTL Product Carousel"
+        component={<RTLProductCarousel />}
+        code={`<RTLProductCarousel />`}
+      >
+        <RTLProductCarousel />
+      </CodeExampleBlock>
+
       <CodeExampleBlock
         title="Basic Carousel"
         component={<BasicCarousel />}
